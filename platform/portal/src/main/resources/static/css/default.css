@@ -1,0 +1,673 @@
+table{
+  border-collapse: collapse;
+  border-width:0px 0px 0px 0px;
+}
+table tr td { padding: 0px; }
+
+body {
+  font-family:"宋体"
+  font-size: 12px;
+  color: #000000;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px
+}
+
+
+.form {margin: 0px; padding: 0px;}
+.input_text {
+  margin: 0px;
+background-color:#FFFFFF ;
+border:#CEE6EA 1px solid;FONT-SIZE: 12px;
+}
+.input_btn {
+  margin: 0px;
+border:#CEE6EA 1px solid;FONT-SIZE: 12px;
+}
+
+
+TD, P, LI, OL {
+  font-family:Arial,Verdana,Helvetica,sans-serif,Verdana;
+  color: #000000;
+  font-size:12px;
+}
+B {
+  FONT-SIZE: 13px; COLOR: #000000
+}
+IMG{
+  border:0px;
+}
+Form{
+  margin:0;
+  padding:0;
+}
+TABLE {
+  TEXT-ALIGN: left;
+}
+INPUT {
+  FONT-SIZE: 9pt; Padding: 1px 2px 1px 2px; 
+}
+TEXTAREA {
+  Padding: 2px 2px 1px 2px; 
+  Background-color:#FFFFFF ;
+  Border-style: solid;
+  Border-width: 1px;
+}
+SELECT {
+  BORDER-RIGHT: 1px ridge; BORDER-TOP: 1px ridge; FONT-SIZE: 10pt; BORDER-LEFT: 1px ridge; BORDER-BOTTOM: 1px ridge; 
+}
+OPTION {
+  FONT-SIZE: 12px
+}
+HR {
+  BORDER-RIGHT: #000000 0px solid; BORDER-TOP: #d1d7dc 1px solid; BORDER-LEFT: #000000 0px solid; BORDER-BOTTOM: #000000 0px solid; HEIGHT: 0px
+}
+
+TR {
+  font-family: "Verdana";
+  font-size: 12pt;
+  color: #000000
+}
+
+I {
+  font-family: "Verdana";
+  font-size: 12pt;
+  color: #000000;
+  font-style: italic
+}
+
+BIG {
+  font-family: "Verdana";
+  font-size: 13pt;
+  color: #000000;
+  font-weight: bold
+}
+
+TH {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000;
+  font-weight: bold
+}
+
+.css {  font-size: 12px; text-decoration: none; color: #000000}
+
+a:link {
+  color: #003366;
+  text-decoration: none;
+}
+a:hover {
+  color: #006699;
+  text-decoration: underline;
+}
+a:active {
+  color: #003366;
+  text-decoration: none;
+}
+a:visited {
+  color: #003366;
+  text-decoration: underline;
+}
+
+H1 {
+  font-family: "Arial";
+  font-size: 30pt;
+  color: navy;
+}
+
+STRONG {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000;
+  text-decoration: none;
+  margin-left
+  =0
+}
+
+H2 {
+  font-family: "Verdana";
+  font-size: 12pt;
+  color: #000000;
+  text-decoration: none;
+  margin-left
+  =0
+}
+
+H3 {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000;
+  text-decoration: none;
+  margin-left
+  =0
+}
+
+PRE {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000
+}
+
+BLOCKQUOTE {
+  font-family: "Verdana, Arial, Helvetica";
+  font-size: 9pt;
+  color: #000000
+}
+
+.WELCOMETITLE {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: white;
+  background: #666666;
+  font-weight: bold
+}
+
+.WELCOMETITLE:link {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: white;
+  background: #666666;
+  font-weight: bold
+}
+
+.WELCOMETITLE:visited {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: white;
+  background: #666666;
+  font-weight: bold
+}
+
+.TOOLBAR {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000;
+  font-weight: normal
+}
+
+.TOOLBAR:link {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000;
+  font-weight: normal
+}
+
+.TOOLBAR:visited {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #000000;
+  font-weight: normal
+}
+
+.TITLEBAR {
+  font-family: "Verdana";
+  font-size: 9pt;
+  color: #FFFFFF;
+  background: navy;
+  font-weight: bold
+}
+
+.MESSAGE {
+  font-family: "Verdana";
+  font-size: 8pt;
+  color: #000000;
+  font-weight: normal
+}
+
+.MESSAGE:link {
+  font-family: "Verdana";
+  font-size: 8pt;
+  color: NAVY;
+  font-weight: normal
+}
+
+.MESSAGE:visited {
+  font-family: "Verdana";
+  font-size: 8pt;
+  color: BLACK;
+  font-weight: normal
+}
+
+.MESSAGENEW {
+  font-family: "Verdana";
+  font-size: 8pt;
+  color: #000000;
+  font-weight: bold
+}
+
+.MESSAGENEW:link {
+  font-family: "Verdana";
+  font-size: 8pt;
+  color: NAVY;
+  font-weight: bold
+}
+
+.MESSAGENEW:visited {
+  font-family: "Verdana";
+  font-size: 8pt;
+  color: BLACK;
+  font-weight: bold
+}
+
+.BorderedContent {
+  background-color: white;
+  border: thin gray solid;
+  color: black;
+  font-weight: normal;
+  padding: 1;
+}
+
+.BorderedController {
+  background-color: white;
+  border: thin gray solid;
+  font: normal;
+  color: black;
+  padding: 1;
+}
+
+.BorderedPortlet {
+  background-color: white;
+  border: thin gray solid;
+  font: normal;
+  color: black;
+  padding: 1;
+}
+
+.BorderedTitle {
+  background-color: gray;
+  border: thin gray solid;
+  color: black;
+  font-weight: bold;
+  padding: 1;
+}
+
+.ControllerStyleClass { /**background-color: white;**/
+  border-style: none;
+  color: black;
+  font-weight: normal;
+  padding: 2;
+}
+
+.PortletStyleClass {
+  background-color: white;
+  border-style: none;
+  color: black;
+  font-weight: normal;
+  padding: 0;
+}
+
+.TabStyleClass {
+  background-color: white;
+  border-style: none;
+  color: black;
+  font-weight: bold;
+  padding: 0;
+}
+
+.TitleStyleClass {
+  background-color: gray;
+  border-style: none;
+  color: black;
+  font-weight: bold;
+  padding: 0;
+}
+
+.HighlightTitleStyleClass {
+  background-color: black;
+  border-style: none;
+  color: white;
+  font-weight: bold;
+  padding: 0;
+}
+
+.TabTitleStyleClass {
+  background-color: white;
+  border-style: none;
+  color: black;
+  font-weight: normal;
+  padding: 0;
+}
+
+.ContentStyleClass {
+  background-color: white;
+  border-style: none;
+  color: black;
+  font-weight: normal;
+  padding: 0;
+}
+
+.TabContentStyleClass {
+  background-color: white;
+  border-style: none;
+  color: black;
+  font-weight: normal;
+  padding: 0;
+}
+
+.listCellHead {
+  text-decoration: underline;
+  background-color: #6868AB;
+  layer-background-color: #CCCCFF;
+  border-style: outset;
+  border-width: 2px;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: black;
+  border-right-color: black;
+  cursor: hand;
+  FONT-SIZE: 8pt;
+  FONT-WEIGHT: bold;
+  COLOR: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+.listCellHeadNoLink {
+  background-color: #6868AB;
+  layer-background-color: #6868AB;
+  border-style: solid;
+  border-width: 2px;
+  border-left-color: #6868AB;
+  border-top-color: #6868AB;
+  border-bottom-color: #6868AB;
+  border-right-color: #6868AB;
+  FONT-SIZE: 7pt;
+  FONT-WEIGHT: normal;
+  COLOR: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+.listCell {
+  background-color: #ECECEC;
+  layer-background-color: #FCFE52;
+  FONT-SIZE: 7pt;
+  FONT-WEIGHT: normal;
+}
+
+.UPPERCASE {
+  text-transform: uppercase;
+}
+
+.WELCOME {
+  font-size: 12pt;
+  font-color: #000000;
+  font-weight: 900;
+  font-stretch: wider;
+}
+
+.MENUBAR {
+  font-family: arial, helvetica;
+  background: #F5F5F5;
+  color: #000000;
+  font-size: 11pt;
+  font-weight: bold;
+  border-top: 1px solid #B0B0B0;
+  border-left: 1px solid #B0B0B0;
+  border-right: 1px solid #FAFAFA;
+  border-bottom: 1px solid #FAFAFA;
+}
+
+.INPUTFORM {
+  font-family: arial, helvetica;
+  background: #F0F0F0;
+  color: #000000;
+  font-size: 11pt;
+  font-weight: bold;
+  border-top: 1px solid #A0A0A0;
+  border-left: 1px solid #A0A0A0;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.INPUTFORMTITLE {
+  font-family: arial, helvetica;
+  background: #FAFAFA;
+  color: #000000;
+  font-size: 13pt;
+  font-weight: bold;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #0A0A0A;
+  border-bottom: 1px solid #0A0A0A;
+}
+
+.MENUBUTTON {
+  font-family: arial, helvetica;
+  background: #E0E0E0;
+  color: #808080;
+  font-size: 10pt;
+  font-weight: bold;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #A0A0A0;
+  border-bottom: 1px solid #A0A0A0;
+}
+
+.PANETITLE {
+  background: #FAFAFA;
+  font-weight: bold;
+}
+
+.BUTON {
+  font-family: arial, helvetica;
+  background: #E0E0E0;
+  color: NAVY;
+  font-size: 10pt;
+  font-weight: bold;
+  border-color: #050505;
+  border-top: 1pt double #FFFFFF;
+  border-left: 1pt double #FFFFFF;
+  border-right: 1pt double #A0A0A0;
+  border-bottom: 1pt double #A0A0A0;
+}
+
+.bluebuttonsmall {
+  background-color: #CCCCCC;
+  border-style: none;
+  color: Black;
+  display: block;
+  font-weight: normal;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #0A0A0A;
+  border-bottom: 1px solid #0A0A0A;
+  width: 65px;
+}
+
+.UserBrowserUserDisabled {
+  background-color: red;
+  text-decoration: line-through;
+}
+
+.UserBrowserUserConfirmed {
+  background-color: yellow;
+  font-style: italic;
+}
+
+.textStyle {color: Black; font-weight : normal;font-size: 8pt;text-decoration: none;}
+.textStyle A {color: Black; font-weight : normal;font-size: 8pt;text-decoration: none;}
+.textStyle A:hover {color: green; font-weight : normal;font-size: 8pt;text-decoration: none;}
+/* Cruiser font style */
+.ccErr, .errorText {color:red; font-weight:normal;}
+.ccMsg, .messageText {font-style:normal; color:blue; font-weight:normal;}
+.ccUpper, .FieldLabel {text-transform: uppercase;}
+.ccFixed, .fixedwidth {font-family:Courier,Courier New,mono; font-size:12px;}
+.ccBold {font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:bold;}
+#ccReq {color:#FF0000;}
+
+/* Calendar Styles */
+#time {color:black; font-size:16px}
+#time A {color:black;}
+#time EM {font-weight:normal; font-size:13px;}
+.weekday {color: #FFFFCC; font-size:12px; font-family:Courier,Courier New,mono;}
+.weekend {color: White; font-size:12px; font-weight:bold; font-family:Courier,Courier New,mono;}
+.days {color: Black; font-size:12px; font-family:Courier,Courier New,mono;}
+.days A {text-decoration:none; color:black;}
+.Date {color:black; font-weight:bold;}
+.Date A {text-decoration:none; color:#000000;}
+.dateLarge {font-weight:bold; color:#333333; font-size:20px;}
+.dateSmall {color:#333333; font-size:14px; font-weight:bold;}
+.calsItem {background-color:#5B9900; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px; font-weight:bold; color:white;}
+.calsItem A {text-decoration:none; color:white;}
+.calsItem A:hover {color:yellow;}
+TABLE.diffMon, TR.diffMon, TD.diffMon, TH.diffMon {background-color:#cccccc;}
+
+/* Menu Styles */
+.ccIndent, .ccIn {margin-left:20px;}
+.ccMENU {margin-left:14px;}
+.ccMENU A {font-size:12px; font-family:Arial,Helvetica,sans-serif; font-weight:normal; text-decoration:none; color:black;}
+.ccMENU A:hover {color:#FFD964; text-decoration:underline;}
+
+/* Icon Style*/
+.ccIcon, .icon {font-family:Arial,Helvetica,sans-serif; color: Black; font-size:12px; font-weight:bold; white-space:nowrap}
+.ccIcon A, .icon A {color: Black; text-decoration:none;}
+.icon A:hover,.ccIcon A:hover {color: red;text-decoration:underline;}
+.ccSIcon, .smallicon {color: #AFD479; font-weight:bold; text-decoration:none;}
+.ccSIcon A, .smallicon A {color: #AFD479; font-weight:bold; text-decoration:none;} 
+.smallicon A:hover,.ccSIcon A:hover {color: red;text-decoration:underline;}
+
+/* Fixed Table Style */
+TABLE.lgrey, TR.lgrey, TD.lgrey, TH.lgrey {background-color:#ffffff;}
+TABLE.lgrey A, TR.lgrey A, TD.lgrey A, TH.lgrey A {color:black;text-decoration:none }
+TABLE.lgrey A:hover, TR.lgrey A:hover, TD.lgrey A:hover, TH.lgrey A:hover {color:#5B9900;background-color:#ffffff;text-decoration:underline;}
+TABLE.tablight, TR.tablight, TD.tablight, TH.tablight {background-color:#999999; color: White; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight : bold;}
+TABLE.tablight A, TR.tablight A, TD.tablight A, TH.tablight A {background-color:#999999; color: White; font-weight : bold; text-decoration:none;}
+TABLE.xlight, TR.xlight, TD.xlight, TH.xlight {background-image : url(../images/theme2/pattern3.gif); margin:0;}
+TABLE.light, TR.light, TD.light, TH.light {background-image : url(../images/theme2/pattern3.gif); margin:0;}
+
+/* Color Styles */
+#bg3 {background-color: #000000;}
+#black {color:black;}
+#orange {color: #FF9900;}
+#blue {color: #AFD479;}
+#blue A {color: #AFD479;}
+#gray {color:#999999;}
+.red {color:#FF0000;}
+#ccBlack {color:#000000; font-weight:bold;}
+#ccBlack A {color:#000000; text-decoration:none;}
+#ccWhite {color:#FFFFFF;}
+#ccWhite A {color:#FFFFFF; text-decoration:none;}
+
+/* ---------------------- CCT-able styles ----------------------------*/
+/* Primary Color*/
+/* 1st Primary Color*/
+.border {background-color:#ff9900; color:#FFFFFF; border-color:#FF9900; font-weight:bold;}
+.border A {text-decoration:none;}
+.border A:hover {color: #999999;}
+.tab2 {color: #FFFFFF; font-weight:bold; text-decoration:none;}
+.tab2 A {color: #FFFFFF; font-weight:bold; text-decoration:none;}
+.tab2:hover {color:#FFFF66}
+TD.ccLLabel, .labelLight {color: #000000; font-weight:bold; font-style:normal;text-align:right;}
+
+/* 2nd Primary Color*/
+.border2 {background-color:#E2FFBD; color:black; font-weight:normal;FONT-SIZE: 12px;TEXT-ALIGN: center;}
+.border2 A {color: #ffffff;  text-decoration:none;FONT-SIZE: 12px;TEXT-ALIGN: center;}
+.border2 A:hover {color: #FF9900;FONT-SIZE: 12px;TEXT-ALIGN: center;border:1px outset #789; margin:0;padding:2px 2px 2px 2px}
+.border3 {background-color:#9acd32; color:white; font-weight:bold;}
+.border3 A {color: white;  text-decoration:none;}
+.border3 A:hover {color: #FF9900;}
+.darkblue {color:#AFD479;}
+.HEADER {font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; color: #000066; font-size:16px;}
+.HEADER2 {font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; color: #000066; font-size:14px;}
+.HEADER2 A {color: #000066;}
+.ccLabel, .label {color: #000000; font-weight:bold; font-style:normal;}
+TD.ccLabel {color: #000000; font-weight:bold; font-style:normal;text-align:right;}
+
+/* Secondary Color*/
+.tab3 {color:#999999; font-weight:bold; text-decoration:none;}
+.tab3 A {color: #999999; font-weight:bold; text-decoration:none;}
+.tab3:hover {color:#cc6600}
+#bg2 {background-color: #FFFFCC;}
+
+
+/* Tertiary Color*/
+/* 1st Tertiary Color*/
+#ccC31 {font-family:Arial,Helvetica,sans-serif;  color: Black; background-color : #DFF7CE;}
+#ccC31 A {color: Black; text-decoration:none;}
+#ccC31 A:hover {color: red;}
+
+/* 2nd Tertiary Color*/
+.ccC32, #ccC32 {background-color: #BEDAA8; margin:0; layer-background-color:#BEDAA8;}
+
+/* 3rd Tertiary Color*/
+#ccC33 {background-color: #FBFBE4;}
+Tr.unread, TD.unread, TH.unread, Tr.due, TD.due, TH.due {font-weight:bold; background-color:#FBFBE4;}
+.ccTool {background-color:#FBFBE4;border:1px groove #BEDAA8; padding:1px; margin:1px; }
+
+/* school Color  : top header background*/
+.ccSchoolColor {background-color:#C5FF99;}
+
+/* Table CCT style */
+TABLE.dark {background-color:#ADDB52;}
+TR.dark, TD.dark, TH.dark, BODY.dark  {background-color:#AFD479; font-family:Arial,Helvetica,sans-serif; color:white; font-size:13px; font-weight : bold;}
+TD.dark A, TH.dark A {background-color:#AFD479; color:white; font-weight : bold; text-decoration:none;text-align:center;}
+.ccHeading, TABLE.ccHeading, TR.ccHeading, TD.ccHeading, TH.ccHeading {font-family:Arial,Helvetica,sans-serif; color:white; font-size:13px; font-weight : bold;}
+.ccHeading A, TABLE.ccHeading A, TR.ccHeading A, TD.ccHeading A, TH.ccHeading A {text-decoration:none; color:white; font-weight : bold;}
+.ccHeading A:hover, TABLE.ccHeading A:hover, TR.ccHeading A:hover, TD.ccHeading A:hover, TH.ccHeading A:hover {color: #FFFF66}
+TABLE.dgrey, TR.dgrey, TD.dgrey, TH.dgrey  {background-color:#ffffcc;}
+TD.ccDLabel, TH.ccDLabel  {background-color:#ffffcc; font-weight:bold; font-style:normal;color:black; text-align:right;}
+TD.ccBox {background-color:#ffffcc; text-align : center;width:20px;} 
+
+/* ../images for Tabs/Menu Heading*/
+.tabselect {background-image:url(../images/theme2/tab_middle_selected.gif); background-repeat:none;}
+.tabselectR {background-image:url(../images/theme2/tab_right_selected.gif); background-repeat:none;}
+.tab {background-image:url(../images/theme2/tab_middle.gif); background-repeat:none;}
+.tabR {background-image:url(../images/theme2/tab_right.gif); background-repeat:none;}
+.ccMenuHead {background-image:url(../images/theme2/menu_heading.gif); background-repeat:none;color:#FFFFFF;  font-weight:bold;}
+.ccTabHead {background-image:url(../images/theme2/tab_heading.gif); background-repeat:none; color:#FFFFFF;  font-weight:bold;  text-decoration:none;}
+
+A.ccSTab:hover {color:red;text-decoration:underline;}
+/*user info vm*/
+.userinfo a:link {font-weight:normal; text-decoration: none; font-size: 12px;font-family:"宋体";}
+.userinfo a:visited {font-weight:normal; text-decoration: none; font-size: 12px;font-family:"宋体";}
+.userinfo a:hover {font-weight:normal; text-decoration: none; font-size: 12px;font-family:"宋体";}
+.userinfo a:active {font-weight:normal; text-decoration: none; font-size: 12px;font-family:"宋体";}
+
+.titleTd{
+  font-size:24px;
+  line-height: 18pt;
+  color:white;
+  font-weight:bold;
+}
+.navbar .TabMiddle a {color: #000000;text-decoration: none}
+.navbar .TabMiddle .active{
+  color:#F98904;
+}
+
+.navbar {
+  margin:auto;
+  width:1000px;
+}
+
+.navbar .TabSeperator
+{
+ width:5px;
+ height:39px;
+}
+
+.navbar .TabMiddle
+{
+ font-weight:bold;
+ font-size: 12px;
+ height:27px;
+ width:90px;
+ padding:0 0 12px 18px;
+}
+
+.fontsize_10_linehi12 {
+    font-size: 12px;
+    line-height: 18pt;
+}
+.fontsize_10_linehi15 {
+    font-size: 12px;
+    line-height: 22pt;
+}
+.fontsize_10_linehi16 {
+    font-size: 14px;
+    line-height: 22pt;
+}
+.fontsize_10_linehi17 {
+    font-size: 18px;
+    line-height: 22pt;
+}

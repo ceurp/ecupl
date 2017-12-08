@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cdi>
+  <container>
+    <module class="org.openurp.platform.ids.cas.DefaultModule"/>
+    <module class="org.openurp.platform.ids.cas.TicketModule"/>
+    <module class="org.openurp.platform.ids.cas.RealmModule"/>
+    <module class="org.openurp.platform.ids.cas.SessionModule"/>
+    <module class="org.openurp.platform.ids.cas.DbCredentialsModule"/>
+  </container>
+  <container name="web">
+    <module class="org.openurp.platform.ids.cas.WebModule"/>
+  </container>
+</cdi>

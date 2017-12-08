@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>org.openurp</groupId>
+    <artifactId>openurp-parent</artifactId>
+    <version>0.1.6</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.openurp.ecupl.platform</groupId>
+  <artifactId>ecupl-platform-parent</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Ecupl Platform</name>
+
+  <properties>
+    <bundle.symbolicName>net.openurp.ecupl.platform.parent</bundle.symbolicName>
+    <bundle.namespace>net.openurp.ecupl.platform.cas</bundle.namespace>
+    <openurp.platform.version>0.0.15</openurp.platform.version>
+  </properties>
+
+  <modules>
+    <module>cas</module>
+    <module>portal</module>
+  </modules>
+</project>

@@ -1,0 +1,522 @@
+body{
+  background-color: #7AB1D0;
+}
+
+.navbar{
+  background-image: url(../images/skins/nju-b/tab_1/1-t.gif);
+}
+.navbar .TabSeperator{
+ background-image: url(../images/skins/nju-b/tab_1/1-tr.gif);
+ }
+
+/*============================================================*/
+.tab-2-controller .MenuBackground
+{
+  background-color:#FFFFFF;
+  }
+
+.tab-2-controller .MenuDot
+{
+  height:2px;
+  width:20px;
+}
+.tab-2 .TopMenuPic
+{
+  width:200px;
+  height:119px;
+  }
+
+.tab-2 .MenuImage
+{
+  width:45px;
+  height:36px;
+}
+
+.tab-2 .MenuLeft
+{
+ width:4px;
+ height:61px;
+ background-image: url(../images/skins/init-template-nju/t_2/02t_l.gif);
+ background-repeat:repeat-x;
+}
+
+.tab-2 .MenuMiddle
+{
+ background-image: url(../images/skins/init-template-nju/t_2/02t.gif);
+ background-repeat: repeat-x;
+ width:182px;
+ height:61px;
+ padding:0 0 0 15px;
+}
+
+.tab-2 .MenuRight
+{
+ width:4px;
+ height:61px;
+ background-image: url(../images/skins/init-template-nju/t_2/02t_r.gif);
+ background-repeat:no-repeat;
+}
+ 
+.tab-2 .MenuLeftLow
+{
+ width:4px;
+ height:61px;
+ background-image: url(../images/skins/init-template-nju/t_2/02t_l.gif);
+ background-repeat:no-repeat;
+}
+
+.tab-2 .MenuMiddleLow
+{
+ background-image: url(../images/skins/init-template-nju/t_2/02t.gif);
+ background-repeat: repeat-x;
+ font-weight:bold;
+ font-size: 20px;
+ width:182px;
+ height:61px;
+ padding:0 0 0 15px;
+}
+
+.tab-2 .MenuRightLow
+{
+ width:4px;
+ height:61px;
+ background-image: url(../images/skins/init-template-nju/t_2/02t_r.gif);
+ background-repeat:no-repeat;
+}
+
+.tab-2 .TabFont
+{
+   color:#F98904;
+     font-size: 12px;
+     font-weight:bold;
+     padding:0 0 0 5px;
+  }
+  
+.tab-2 .TabA
+{
+     padding:0 0 0 5px;
+  }
+    
+.tab-2 a:link.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
+.tab-2 a:visited.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
+.tab-2 a:hover.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
+.tab-2 a:active.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
+
+/*============================================================*/
+
+.nju-1 .PTitleLeft
+{
+ width:14px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_1/y-ptl.gif);
+}
+
+.nju-1 .PTitle
+{
+ width:60px;
+ height:35px;
+ font-weight:bold;
+ font-size: 14px;
+ color: #000000;
+ background:  url(../images/skins/nju-b/p_1/y-pt.gif);
+ background-repeat: repeat-x;
+ padding:0px 0 0 16px;
+}
+
+.nju-1 .PTableBack
+{
+ height:35px;
+ background:  url(../images/skins/nju-b/p_1/y-pt.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-1 .PTitleRight
+{
+ width:16px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_1/y-ptr.gif);
+}
+
+.nju-1 .PContentLeft
+{
+ width:14px;
+ background:  url(../images/skins/nju-b/p_1/y-pcl.gif);
+ background-repeat: repeat-y;
+}
+
+.nju-1 .PContent
+{
+  background-color:#FFFFFF;
+}
+
+.nju-1 .PContentRight
+{
+ width:16px;
+ background:  url(../images/skins/nju-b/p_1/y-pcr.gif);
+ background-repeat: repeat-y;
+}
+
+.nju-1 .PBottomLeft
+{
+ width:14px;
+ height:10px;
+ background:  url(../images/skins/nju-b/p_1/y-pbl.gif);
+ background-repeat:no-repeat;
+}
+
+.nju-1 .PBottom
+{
+ height:10px;
+ background:  url(../images/skins/nju-b/p_1/y-pb.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-1 .PBottomRight
+{
+ width:16px;
+ height:10px;
+ background:  url(../images/skins/nju-b/p_1/y-pbr.gif);
+ background-repeat:no-repeat;
+}
+
+
+/*============================================================*/
+.nju-2 .PTitleLeft
+{
+ width:12px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_2/1-ptl.gif);
+}
+
+.nju-2 .PTitle
+{
+ width:60px;
+ height:35px;
+ font-weight:bold;
+ font-size: 14px;
+ color: #000000;
+ background:  url(../images/skins/nju-b/p_2/1-pt.gif);
+ background-repeat: repeat-x;
+ padding:0px 20px 0 16px;
+}
+
+.nju-2 .PTableBack
+{
+ height:35px;
+ background:  url(../images/skins/nju-b/p_2/1-ptb.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-2 .PTitleRightBack
+{
+ width:12px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_2/1-ptrb.gif);
+ background-repeat:no-repeat;
+}
+
+.nju-2 .PTitleRight
+{
+ width:9px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_2/1-ptr.gif);
+}
+
+.nju-2 .PContentLeft
+{
+ width:11px;
+ background:  url(../images/skins/nju-b/p_2/1-pcl.gif);
+ background-repeat: repeat-y;
+}
+
+.nju-2 .PContent
+{
+  background-color:#FFFFFF;
+}
+
+.nju-2 .PContentRight
+{
+ width:9px;
+ background:  url(../images/skins/nju-b/p_2/1-pcr.gif);
+ background-repeat: repeat-y;
+}
+
+.nju-2 .PBottomLeft
+{
+ width:12px;
+ height:14px;
+ background:  url(../images/skins/nju-b/p_2/1-pbl.gif);
+ background-repeat:no-repeat;
+}
+
+.nju-2 .PBottom
+{
+ height:14px;
+ background:  url(../images/skins/nju-b/p_2/1-pb.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-2 .PBottomRight
+{
+ width:9px;
+ height:14px;
+ background:  url(../images/skins/nju-b/p_2/1-pbr.gif);
+ background-repeat:no-repeat;
+}
+
+
+/*============================================================*/
+.nju-3 .PTitleLeft
+{
+ width:9px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_3/2-ptl.gif);
+}
+
+.nju-3 .PTitle
+{
+ width:60px;
+ height:35px;
+ font-weight:bold;
+ font-size: 14px;
+ color: #000000;
+ background:  url(../images/skins/nju-b/p_3/2-pt.gif);
+ background-repeat: repeat-x;
+ padding:0px 20px 0 16px;
+}
+
+.nju-3 .PTableBack
+{
+ height:35px;
+ background:  url(../images/skins/nju-b/p_3/2-pt.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-3 .PTitleRight
+{
+ width:14px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_3/2-ptr.gif);
+}
+
+.nju-3 .PContentLeft
+{
+ width:8px;
+ height:14px;
+ background:  url(../images/skins/nju-b/p_3/2-pcl.gif);
+ background-repeat: repeat-y;
+}
+
+.nju-3 .PContent
+{
+ background-color:#FFFFFF; 
+}
+
+.nju-3 .PContentRight
+{
+ width:14px;
+ height:14px;
+ background:  url(../images/skins/nju-b/p_3/2-pcr.gif);
+ background-repeat: repeat-y;
+}
+
+.nju-3 .PBottomLeft
+{
+ width:9px;
+ height:14px;
+ background:  url(../images/skins/nju-b/p_3/2-pbl.gif);
+ background-repeat: no-repeat;
+}
+
+.nju-3 .PBottom
+{
+ height:14px;
+ background:  url(../images/skins/nju-b/p_3/2-pb.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-3 .PBottomRight
+{
+ width:14px;
+ height:14px;
+ background:  url(../images/skins/nju-b/p_3/2-pbr.gif);
+ background-repeat: no-repeat;
+}
+
+/*============================================================*/
+.nju-4 .PTitleLeft
+{
+ width:14px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_4/3-ptl.gif);
+}
+
+.nju-4 .PTitle
+{
+ width:60px;
+ height:35px;
+ font-weight:bold;
+ font-size: 14px;
+ color: #000000;
+ background:  url(../images/skins/nju-b/p_4/3-pt.gif);
+ background-repeat: repeat-x;
+ padding:0px 20px 0 16px;
+}
+
+.nju-4 .PTableBack
+{
+ height:35px;
+ background:  url(../images/skins/nju-b/p_4/3-ptb.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-4 .PTitleRight
+{
+ width:6px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_4/3-ptr.gif);
+}
+
+.nju-4 .PTitleRightBack
+{
+ width:6px;
+ height:35px;
+ background:  url(../images/skins/nju-b/p_4/3-ptrb.gif);
+}
+
+.nju-4 .PContentLeft
+{
+  width:14px;
+  background-image: url(../images/skins/nju-b/p_4/3-pcl.gif);
+  background-repeat: repeat-y;
+}
+
+.nju-4 .PContent
+{
+  background-color:#FFFFFF; 
+}
+
+.nju-4 .PContentRight
+{
+  width:6px;
+  background-image: url(../images/skins/nju-b/p_4/3-pcr.gif);
+  background-repeat: repeat-y;
+}
+
+.nju-4 .PBottomLeft
+{
+  width:14px;
+  height:10px;
+  background: url(../images/skins/nju-b/p_4/3-pbl.gif);
+  background-repeat: no-repeat;
+}
+
+.nju-4 .PBottom
+{
+   height:10px;
+   background: url(../images/skins/nju-b/p_4/3-pb.gif);
+   background-repeat: repeat-x;
+}
+
+.nju-4 .PBottomRight
+{
+  width:6px;
+  height:10px;
+  background: url(../images/skins/nju-b/p_4/3-pbr.gif);
+  background-repeat: no-repeat;
+}
+
+/*============================================================*/
+.nju-5 .PTitleLeft
+{
+ width:6px;
+ height:34px;
+ background:  url(../images/skins/nju-b/p_5/4-ptl.gif);
+}
+
+.nju-5 .PTitle
+{
+ height:34px;
+ font-weight:bold;
+ font-size: 14px;
+ color: #000000;
+ background:  url(../images/skins/nju-b/p_5/4-pt.gif);
+ background-repeat: repeat-x;
+ padding:0 20px 0 20px;
+}
+
+.nju-5 .PTitleL
+{
+
+ height:34px;
+ font-weight:bold;
+ font-size: 14px;
+ color: #000000;
+ background:  url(../images/skins/nju-b/p_5/4-ptll.gif);
+ background-repeat: repeat-x;
+ padding:0 20px 0 20px;
+}
+
+.nju-5 .PM
+{
+ width:1px;
+ height:34px;
+ background:  url(../images/skins/nju-b/p_5/4-pm.gif);
+}
+
+.nju-5 .PTableBack
+{
+ height:34px;
+ background:  url(../images/skins/nju-b/p_5/4-ptll.gif);
+ background-repeat: repeat-x;
+}
+
+.nju-5 .PTitleRight
+{
+ width:9px;
+ height:34px;
+ background:  url(../images/skins/nju-b/p_5/4-ptr.gif);
+}
+
+.nju-5 .PContentLeft
+{
+  width:5px;
+  background-image: url(../images/skins/nju-b/p_5/4-pcl.gif);
+  background-repeat: repeat-y;
+  padding:0 0 0 0;
+}
+
+.nju-5 .PContent
+{
+  }
+
+.nju-5 .PContentRight
+{
+  width:9px;
+  background-image: url(../images/skins/nju-b/p_5/4-pcr.gif);
+  background-repeat: repeat-y;
+}
+
+.nju-5 .PBottomLeft
+{
+  width:6px;
+  height:7px;
+  background: url(../images/skins/nju-b/p_5/4-pbl.gif);
+  background-repeat: no-repeat;
+
+}
+
+.nju-5 .PBottom
+{
+   height:7px;
+   background: url(../images/skins/nju-b/p_5/4-pb.gif);
+   background-repeat: repeat-x;
+}
+
+.nju-5 .PBottomRight
+{
+  width:9px;
+  height:7px;
+  background: url(../images/skins/nju-b/p_5/4-pbr.gif);
+  background-repeat: no-repeat;
+}

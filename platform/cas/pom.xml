@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>net.openurp.ecupl.platform</groupId>
+    <artifactId>ecupl-platform-parent</artifactId>
+    <version>0.0.2-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>ecupl-platform-cas</artifactId>
+  <packaging>war</packaging>
+  <name>Ecupl Platform Cas Server</name>
+
+  <properties>
+    <bundle.symbolicName>net.openurp.ecupl.platform.cas</bundle.symbolicName>
+    <bundle.namespace>net.openurp.ecupl.platform.cas</bundle.namespace>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.beangle.commons</groupId>
+      <artifactId>beangle-commons-core_2.12</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.openurp.platform.core</groupId>
+      <artifactId>openurp-platform-core-ids</artifactId>
+      <version>${openurp.platform.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.beangle.commons</groupId>
+      <artifactId>beangle-commons-text_2.12</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.beangle.webmvc</groupId>
+      <artifactId>beangle-webmvc-spring-plugin_2.12</artifactId>
+    </dependency>
+     <dependency>
+      <groupId>org.beangle.webmvc</groupId>
+      <artifactId>beangle-webmvc-view_2.12</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
