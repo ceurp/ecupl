@@ -20,8 +20,8 @@
       <artifactId>beangle-commons-core_2.12</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.openurp.platform.core</groupId>
-      <artifactId>openurp-platform-core-ids</artifactId>
+      <groupId>org.openurp.platform</groupId>
+      <artifactId>openurp-platform-cas_2.12</artifactId>
       <version>${openurp.platform.version}</version>
     </dependency>
     <dependency>

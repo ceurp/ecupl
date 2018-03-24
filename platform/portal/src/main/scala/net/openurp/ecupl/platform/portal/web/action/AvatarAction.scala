@@ -5,9 +5,9 @@ import java.io.File
 import org.beangle.commons.lang.ClassLoaders
 import org.beangle.webmvc.api.action.ActionSupport
 import org.beangle.webmvc.api.view.{ Stream, View }
-import org.openurp.platform.api.Urp
-import org.openurp.platform.api.app.UrpApp
-import org.openurp.platform.api.security.Securities
+import org.openurp.app.UrpApp
+import org.openurp.app.Urp
+import org.beangle.security.Securities
 
 class AvatarAction extends ActionSupport {
 
@@ -17,7 +17,7 @@ class AvatarAction extends ActionSupport {
     if (avatarFile.exists()) {
       Stream(avatarFile)
     } else {
-      Stream(ClassLoaders.getResource("static/images/nopic.jpg"))
+      Stream(ClassLoaders.getResource("static/images/nopic.jpg").get)
     }
   }
 }

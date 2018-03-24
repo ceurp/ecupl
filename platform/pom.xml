@@ -2,7 +2,7 @@
   <parent>
     <groupId>org.openurp</groupId>
     <artifactId>openurp-parent</artifactId>
-    <version>0.1.6</version>
+    <version>0.2.10</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.openurp.ecupl.platform</groupId>
@@ -14,7 +14,8 @@
   <properties>
     <bundle.symbolicName>net.openurp.ecupl.platform.parent</bundle.symbolicName>
     <bundle.namespace>net.openurp.ecupl.platform.cas</bundle.namespace>
-    <openurp.platform.version>0.0.15</openurp.platform.version>
+    <openurp.platform.version>0.0.25</openurp.platform.version>
+    <openurp.app.version>0.0.4</openurp.app.version>
   </properties>
 
   <modules>

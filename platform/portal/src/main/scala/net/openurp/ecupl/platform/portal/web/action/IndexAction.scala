@@ -1,35 +1,35 @@
 package net.openurp.ecupl.platform.portal.web.action
 
-import org.beangle.commons.dao.OqlBuilder
 import org.beangle.commons.web.util.RequestUtils
-import org.beangle.security.context.SecurityContext
 import org.beangle.security.mgt.SecurityManager
 import org.beangle.webmvc.api.context.ActionContext
 import org.beangle.webmvc.api.view.View
-import org.openurp.platform.api.Urp
-import org.openurp.platform.config.model.App
-import org.openurp.platform.security.model.FuncPermission
+import org.openurp.app.Urp
 
 import net.openurp.ecupl.platform.portal.news.helper.NewsCrawler
+import org.beangle.security.context.SecurityContext
+import org.beangle.data.dao.OqlBuilder
+import org.openurp.platform.security.model.FuncPermission
+import org.beangle.security.Securities
 
 /**
  * @author chaostone
  */
 class IndexAction extends AbstractPortalAction {
- 
+
   var securityManager: SecurityManager = _
   var newsCrawler: NewsCrawler = _
 
-  def index(): String = {
+  def index(): View = {
     put("static_base", ActionContext.current.request.getContextPath + "/static")
     put("theme", "blue")
     put("self_action", "/index/index")
     put("client", RequestUtils.getIpAddr(ActionContext.current.request))
     val user = getUser
-    
+
     put("webappBase", Urp.webappBase)
-    put("yedaNewsUrl",NewsCrawler.yedaNewsUrl)
-    put("examNewsUrl",NewsCrawler.examNewsUrl)
+    put("yedaNewsUrl", NewsCrawler.yedaNewsUrl)
+    put("examNewsUrl", NewsCrawler.examNewsUrl)
     put("yedaNews", newsCrawler.getYedaNews())
     put("examNews", newsCrawler.getExamNews())
 
@@ -45,7 +45,9 @@ class IndexAction extends AbstractPortalAction {
   }
 
   def logout(): View = {
-    securityManager.logout(SecurityContext.session)
+    Securities.session foreach { s =>
+      securityManager.logout(s)
+    }
     redirect(to(casConfig.casServer + "/logout"), null)
   }
 }

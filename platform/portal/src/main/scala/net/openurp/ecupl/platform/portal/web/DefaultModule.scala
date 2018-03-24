@@ -1,15 +1,14 @@
 package net.openurp.ecupl.platform.portal.web
 
-import org.beangle.commons.cache.ehcache.EhCacheManager
-import org.beangle.commons.cdi.bind.AbstractBindModule
-
 import net.openurp.ecupl.platform.portal.news.helper.NewsCrawler
 import net.openurp.ecupl.platform.portal.web.action.{ AvatarAction, IndexAction, LoginAction, StudyAction, TeachingAction }
+import org.beangle.cdi.bind.BindModule
+import org.beangle.cache.ehcache.EhCacheManager
 
 /**
  * @author chaostone
  */
-class DefaultModule extends AbstractBindModule {
+class DefaultModule extends BindModule {
 
   override def binding() {
     bind(classOf[IndexAction], classOf[LoginAction], classOf[AvatarAction], classOf[StudyAction], classOf[TeachingAction])

@@ -18,15 +18,16 @@
  */
 package net.openurp.ecupl.platform.portal.web
 
-import org.beangle.commons.cache.concurrent.ConcurrentMapCacheManager
-import org.beangle.commons.cdi.bind.AbstractBindModule
-import org.beangle.data.hibernate.{ HibernateEntityDao, HibernateMetadataFactory }
 import org.beangle.data.hibernate.spring.{ HibernateTransactionManager, LocalSessionFactoryBean }
 import org.beangle.data.hibernate.spring.web.OpenSessionInViewInterceptor
 import org.springframework.beans.factory.config.PropertiesFactoryBean
 import org.springframework.transaction.interceptor.TransactionProxyFactoryBean
+import org.beangle.cache.concurrent.ConcurrentMapCacheManager
+import org.beangle.cdi.bind.BindModule
+import org.beangle.data.hibernate.HibernateEntityDao
+import org.beangle.data.hibernate.DomainFactory
 
-object DaoModule extends AbstractBindModule {
+object DaoModule extends BindModule {
 
   protected override def binding(): Unit = {
     bind("HibernateConfig.default", classOf[PropertiesFactoryBean]).property(
@@ -55,7 +56,7 @@ object DaoModule extends AbstractBindModule {
         "batch*=PROPAGATION_REQUIRED", "execute*=PROPAGATION_REQUIRED", "remove*=PROPAGATION_REQUIRED",
         "*=PROPAGATION_REQUIRED,readOnly")).primary
 
-    bind("EntityMetadata.hibernate", classOf[HibernateMetadataFactory])
+    bind(classOf[DomainFactory])
 
     bind("EntityDao.hibernate", classOf[TransactionProxyFactoryBean]).proxy("target", classOf[HibernateEntityDao])
       .parent("TransactionProxy.template").primary().description("基于Hibernate提供的通用DAO")

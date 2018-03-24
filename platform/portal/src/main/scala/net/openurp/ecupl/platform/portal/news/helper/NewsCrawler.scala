@@ -6,12 +6,13 @@ import java.net.URL
 import java.nio.charset.Charset
 import java.util.regex.Pattern
 
-import org.beangle.commons.cache.Cache
-import org.beangle.commons.cache.CacheManager
 import org.beangle.commons.io.IOs
 import org.beangle.commons.lang.Strings
 
 import net.openurp.ecupl.platform.portal.news.model.News
+import org.beangle.cache.Cache
+import org.beangle.cache.CacheManager
+
 
 object NewsCrawler {
 
