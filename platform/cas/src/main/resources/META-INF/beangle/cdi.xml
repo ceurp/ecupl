@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <cdi>
   <container>
-    <module class="org.openurp.platform.ids.cas.DefaultModule"/>
-    <module class="org.openurp.platform.ids.cas.TicketModule"/>
-    <module class="org.openurp.platform.ids.cas.RealmModule"/>
-    <module class="org.openurp.platform.ids.cas.SessionModule"/>
-    <module class="org.openurp.platform.ids.cas.DbCredentialsModule"/>
+    <module class="org.openurp.platform.cas.DefaultModule"/>
+    <module class="org.openurp.platform.cas.TicketModule"/>
+    <module class="org.openurp.platform.cas.SessionModule"/>
+    <module class="org.openurp.platform.cas.DaoRealmModule"/>
+    <module class="org.openurp.platform.cas.DaoModule"/>
+    <module class="net.openurp.ecupl.platform.cas.CredentialsModule"/>
+    <module class="org.openurp.platform.user.service.DefaultModule"/>
   </container>
   <container name="web">
-    <module class="org.openurp.platform.ids.cas.WebModule"/>
+    <module class="org.openurp.platform.cas.WebModule"/>
   </container>
 </cdi>

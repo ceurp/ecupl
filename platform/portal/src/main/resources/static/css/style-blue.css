@@ -56,7 +56,7 @@ body{
  background-image: url(../images/skins/init-template-nju/t_2/02t_r.gif);
  background-repeat:no-repeat;
 }
- 
+
 .tab-2 .MenuLeftLow
 {
  width:4px;
@@ -91,12 +91,12 @@ body{
      font-weight:bold;
      padding:0 0 0 5px;
   }
-  
+
 .tab-2 .TabA
 {
      padding:0 0 0 5px;
   }
-    
+
 .tab-2 a:link.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
 .tab-2 a:visited.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
 .tab-2 a:hover.TabLink {color: #000000;font-weight:bold; text-decoration: none; font-size: 12px;}
@@ -178,7 +178,6 @@ body{
  background:  url(../images/skins/nju-b/p_1/y-pbr.gif);
  background-repeat:no-repeat;
 }
-
 
 /*============================================================*/
 .nju-2 .PTitleLeft
@@ -264,7 +263,6 @@ body{
  background-repeat:no-repeat;
 }
 
-
 /*============================================================*/
 .nju-3 .PTitleLeft
 {
@@ -309,7 +307,7 @@ body{
 
 .nju-3 .PContent
 {
- background-color:#FFFFFF; 
+ background-color:#FFFFFF;
 }
 
 .nju-3 .PContentRight
@@ -393,7 +391,7 @@ body{
 
 .nju-4 .PContent
 {
-  background-color:#FFFFFF; 
+  background-color:#FFFFFF;
 }
 
 .nju-4 .PContentRight

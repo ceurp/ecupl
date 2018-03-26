@@ -12,7 +12,6 @@ body {
   padding: 0px 0px 0px 0px
 }
 
-
 .form {margin: 0px; padding: 0px;}
 .input_text {
   margin: 0px;
@@ -23,7 +22,6 @@ border:#CEE6EA 1px solid;FONT-SIZE: 12px;
   margin: 0px;
 border:#CEE6EA 1px solid;FONT-SIZE: 12px;
 }
-
 
 TD, P, LI, OL {
   font-family:Arial,Verdana,Helvetica,sans-serif,Verdana;
@@ -44,16 +42,16 @@ TABLE {
   TEXT-ALIGN: left;
 }
 INPUT {
-  FONT-SIZE: 9pt; Padding: 1px 2px 1px 2px; 
+  FONT-SIZE: 9pt; Padding: 1px 2px 1px 2px;
 }
 TEXTAREA {
-  Padding: 2px 2px 1px 2px; 
+  Padding: 2px 2px 1px 2px;
   Background-color:#FFFFFF ;
   Border-style: solid;
   Border-width: 1px;
 }
 SELECT {
-  BORDER-RIGHT: 1px ridge; BORDER-TOP: 1px ridge; FONT-SIZE: 10pt; BORDER-LEFT: 1px ridge; BORDER-BOTTOM: 1px ridge; 
+  BORDER-RIGHT: 1px ridge; BORDER-TOP: 1px ridge; FONT-SIZE: 10pt; BORDER-LEFT: 1px ridge; BORDER-BOTTOM: 1px ridge;
 }
 OPTION {
   FONT-SIZE: 12px
@@ -524,7 +522,7 @@ TABLE.diffMon, TR.diffMon, TD.diffMon, TH.diffMon {background-color:#cccccc;}
 .ccIcon A, .icon A {color: Black; text-decoration:none;}
 .icon A:hover,.ccIcon A:hover {color: red;text-decoration:underline;}
 .ccSIcon, .smallicon {color: #AFD479; font-weight:bold; text-decoration:none;}
-.ccSIcon A, .smallicon A {color: #AFD479; font-weight:bold; text-decoration:none;} 
+.ccSIcon A, .smallicon A {color: #AFD479; font-weight:bold; text-decoration:none;}
 .smallicon A:hover,.ccSIcon A:hover {color: red;text-decoration:underline;}
 
 /* Fixed Table Style */
@@ -580,7 +578,6 @@ TD.ccLabel {color: #000000; font-weight:bold; font-style:normal;text-align:right
 .tab3:hover {color:#cc6600}
 #bg2 {background-color: #FFFFCC;}
 
-
 /* Tertiary Color*/
 /* 1st Tertiary Color*/
 #ccC31 {font-family:Arial,Helvetica,sans-serif;  color: Black; background-color : #DFF7CE;}
@@ -607,7 +604,7 @@ TD.dark A, TH.dark A {background-color:#AFD479; color:white; font-weight : bold;
 .ccHeading A:hover, TABLE.ccHeading A:hover, TR.ccHeading A:hover, TD.ccHeading A:hover, TH.ccHeading A:hover {color: #FFFF66}
 TABLE.dgrey, TR.dgrey, TD.dgrey, TH.dgrey  {background-color:#ffffcc;}
 TD.ccDLabel, TH.ccDLabel  {background-color:#ffffcc; font-weight:bold; font-style:normal;color:black; text-align:right;}
-TD.ccBox {background-color:#ffffcc; text-align : center;width:20px;} 
+TD.ccBox {background-color:#ffffcc; text-align : center;width:20px;}
 
 /* ../images for Tabs/Menu Heading*/
 .tabselect {background-image:url(../images/theme2/tab_middle_selected.gif); background-repeat:none;}

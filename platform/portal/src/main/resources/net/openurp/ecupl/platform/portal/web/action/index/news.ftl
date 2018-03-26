@@ -11,12 +11,9 @@
            <td valign="middle" align="left" class="PTitleL" onclick="changesrc('P-12860be1483-10001_2','P-12860be1483-10001','2','2')" id="P-12860be1483-10001_2" style="cursor:hand">
                     考务信息
                 </td>
-                                                      
-      
+
             <td class="PTitleRightBack"></td>
       <td nowrap="true" align="right">
-
-
 
 <img width="1" height="1" src="${static_base}/images/blank.gif">
 
@@ -28,7 +25,7 @@
     <tbody><tr>
                     <td class="PContentLeft"></td>
                 <td valign="top" align="left" class="PContent" colspan="2">
-  
+
 <table border="0" style="display:block" style="line-height:17pt" id='P-12860be1483-10001_1_content'>
         <tbody>
         [#list yedaNews as news]
@@ -44,7 +41,7 @@
         [/#list]
         <tr><td colspan="2" align="right"><a title="更多" href="javaScript:var newwin=window.open('${yedaNewsUrl}')"><img width="41" height="11" border="0" src="${static_base}/images/index_15.jpg" id="ext-gen21"></a></td></tr>
     </tbody></table>
-    
+
 <table style="display:none" border="0" style="line-height:17pt" id='P-12860be1483-10001_2_content'>
         <tbody>
         [#list examNews as news]

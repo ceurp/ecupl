@@ -4,7 +4,7 @@
 <table width="100%" cellspacing="0" cellpadding="0" border="0" class="PTableBack">
   <tbody><tr>
           <td class="PTitleLeft"></td>
-        
+
      <td valign="middle" align="left" class="PTitle"><nobr>消息中心 </nobr></td>
             <td class="PTitleRightBack"></td>
       <td nowrap="true" align="right">

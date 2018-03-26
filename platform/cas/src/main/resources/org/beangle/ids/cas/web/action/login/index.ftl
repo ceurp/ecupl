@@ -26,11 +26,11 @@
       <input type="hidden" name="sid_name" value="${Parameters['sid_name']}">
     [/#if]
     [#if Parameters['service']??]
-	  <input type="hidden" name="service" value="${Parameters['service']}">
-	[#else]
-	<input type="hidden" name="sid_name" value="URP_SID}">
-	<input type="hidden" name="service" value="http://${request.serverName}:${request.serverPort}/openurp/index.action">
-	[/#if]
+    <input type="hidden" name="service" value="${Parameters['service']}">
+  [#else]
+  <input type="hidden" name="sid_name" value="URP_SID}">
+  <input type="hidden" name="service" value="http://${request.serverName}:${request.serverPort}/openurp/index.action">
+  [/#if]
         <table class="bulletin">
             <tr>
                 <td>
@@ -45,7 +45,7 @@
             <tr>
                 <td><label for="username">用户名:&nbsp;</label></td>
                 <td>
-                    <input name="username" id="username" tabindex="1" title="请输入用户名" type="text" value="${Parameters['username']!}" style="width:105px;"/>
+                    <input name="username" id="username" tabindex="1" title="请输入用户名" type="text" value="${(Parameters['username']?html)!}" style="width:105px;"/>
                 </td>
             </tr>
             <tr>

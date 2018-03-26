@@ -3,7 +3,9 @@
   <container name="web">
     <module class="net.openurp.ecupl.platform.portal.web.DefaultModule"/>
   </container>
+
   <container>
+    <module class="org.openurp.app.cas.DefaultModule"/>
     <module class="net.openurp.ecupl.platform.portal.web.DaoModule"/>
   </container>
 </cdi>

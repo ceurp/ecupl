@@ -58,7 +58,6 @@
 </div>
 [/#macro]
 
-
 [#macro foot]
 <table width="1000px" style="margin:auto">
   <tbody>

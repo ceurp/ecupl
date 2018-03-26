@@ -16,23 +16,26 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.openurp.ecupl.platform.portal.web.action
+package net.openurp.ecupl.platform.cas
 
-import org.beangle.webmvc.api.context.ActionContext
-import org.beangle.webmvc.api.view.View
-import org.openurp.app.Urp
+import org.beangle.data.jdbc.query.JdbcExecutor
+import org.beangle.security.codec.DefaultPasswordEncoder
 
-class TeachingAction extends AbstractPortalAction {
+import javax.sql.DataSource
+import org.beangle.security.authc.CredentialsChecker
 
-  def index(): View = {
-    put("static_base", ActionContext.current.request.getContextPath + "/static")
-    put("theme", "blue")
-    put("self_action", "/study/index")
+class SimpleDBCredentialsChecker(dataSource: DataSource) extends CredentialsChecker {
 
-    val user = getUser
-    put("user", user)
-    put("webappBase", Urp.webappBase)
-    forward()
+  private val executor = new JdbcExecutor(dataSource)
+
+  override def check(principal: Any, credential: Any): Boolean = {
+    val rs = executor.query("select password from usr.users where code = ?", principal)
+    if (rs.isEmpty) {
+      false
+    } else {
+      val digest = rs.head.head.asInstanceOf[String]
+      (digest == credential.toString) ||
+        DefaultPasswordEncoder.verify(digest, credential.toString)
+    }
   }
-
 }

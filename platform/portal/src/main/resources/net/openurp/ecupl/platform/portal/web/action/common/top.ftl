@@ -41,8 +41,8 @@
           <td width="92px" valign="middle">
             <table width="90%"  class="font_color_white" >
               <tr>
-                [#-- 
-                <div id="wendu" name="wendu" class="font_color_white" >&nbsp;</div> 
+                [#--
+                <div id="wendu" name="wendu" class="font_color_white" >&nbsp;</div>
                 <div id="tianqi" name="tianqi" class="font_color_white" >&nbsp;</div>
                --]
               </tr>

@@ -16,23 +16,16 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.openurp.ecupl.platform.portal.web.action
+package net.openurp.ecupl.platform.cas
 
-import org.beangle.webmvc.api.context.ActionContext
-import org.beangle.webmvc.api.view.View
-import org.openurp.app.Urp
+import org.openurp.app.UrpApp
+import org.beangle.security.realm.ldap.SimpleLdapUserStore
+import java.io.FileInputStream
+import org.beangle.cdi.bind.BindModule
 
-class TeachingAction extends AbstractPortalAction {
-
-  def index(): View = {
-    put("static_base", ActionContext.current.request.getContextPath + "/static")
-    put("theme", "blue")
-    put("self_action", "/study/index")
-
-    val user = getUser
-    put("user", user)
-    put("webappBase", Urp.webappBase)
-    forward()
+class CredentialsModule extends BindModule {
+  override def binding() {
+    bind("security.CredentialsChecker.default", classOf[SimpleDBCredentialsChecker])
+      .constructor(ref("DataSource.security"))
   }
-
 }

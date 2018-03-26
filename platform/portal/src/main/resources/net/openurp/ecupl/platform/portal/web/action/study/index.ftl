@@ -18,7 +18,6 @@
 </td></tr></tbody></table>
 </div>
 
-
 [@foot]
 <script>
 var contextPath="${base}"

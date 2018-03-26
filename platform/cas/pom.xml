@@ -54,6 +54,16 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.beangle.webui</groupId>
+      <artifactId>beangle-webui-tag_2.12</artifactId>
+      <version>${beangle.webui.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.beangle.webui</groupId>
+      <artifactId>beangle-webui-bootstrap_2.12</artifactId>
+      <version>${beangle.webui.version}</version>
+    </dependency>
   </dependencies>
 
 </project>
