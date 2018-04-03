@@ -19,21 +19,20 @@
 package net.openurp.ecupl.platform.portal.web.action
 
 import org.beangle.commons.web.util.RequestUtils
-import org.beangle.security.mgt.SecurityManager
+import org.beangle.data.dao.OqlBuilder
+import org.beangle.webmvc.api.action.ServletSupport
 import org.beangle.webmvc.api.context.ActionContext
 import org.beangle.webmvc.api.view.View
+import org.beangle.security.realm.cas.Cas
 import org.openurp.app.Urp
+import org.openurp.platform.security.model.FuncPermission
 
 import net.openurp.ecupl.platform.portal.news.helper.NewsCrawler
-import org.beangle.security.context.SecurityContext
-import org.beangle.data.dao.OqlBuilder
-import org.openurp.platform.security.model.FuncPermission
-import org.beangle.security.Securities
 
 /**
  * @author chaostone
  */
-class IndexAction extends AbstractPortalAction {
+class IndexAction extends AbstractPortalAction with ServletSupport {
 
   var newsCrawler: NewsCrawler = _
 
@@ -57,11 +56,10 @@ class IndexAction extends AbstractPortalAction {
       .select("distinct fp.resource.app"))
     put("apps", apps)
     put("user", user)
-    put("casConfig", casConfig)
     forward()
   }
 
   def logout(): View = {
-    redirect(to(casConfig.casServer + "/logout"), null)
+    redirect(to(Cas.cleanup(casConfig, request, response)), null)
   }
 }
