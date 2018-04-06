@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<cdi>
+  <container name="web">
+    <module class="net.openurp.ecupl.platform.portal.web.DefaultModule"/>
+    <module class="org.openurp.platform.cas.WebModule"/>
+    <module class="org.openurp.platform.ws.DefaultModule"/>
+    <module class="org.openurp.platform.web.ConfigModule"/>
+    <module class="org.openurp.platform.web.SecurityModule"/>
+  </container>
+
+  <container>
+    <module class="org.beangle.serializer.text.DefaultModule"/>
+    <module class="org.beangle.serializer.json.DefaultModule"/>
+
+    <module class="org.openurp.platform.cas.DefaultModule"/>
+    <module class="org.openurp.platform.cas.TicketModule"/>
+    <module class="org.openurp.platform.cas.SessionModule"/>
+    <module class="org.openurp.platform.cas.DaoRealmModule"/>
+    <module class="org.openurp.platform.cas.DaoModule"/>
+    <module class="org.openurp.platform.cas.DBLdapCredentialsModule"/>
+
+    <module class="org.openurp.platform.user.service.DefaultModule"/>
+    <module class="org.openurp.platform.config.service.DefaultModule"/>
+    <module class="org.openurp.platform.security.service.DefaultModule"/>
+  </container>
+</cdi>
