@@ -51,14 +51,6 @@
                 </td>
                 <td>
                     <input id="password" name="password"  tabindex="2" type="password" style="width:105px;"/>
-                    <input name="encodedPassword" type="hidden" value=""/>
-                    <input name="file1" type="file" />
-                    <input name="file1" type="file" />
-                    <input name="file2" type="file" />
-                    <input name="file2" type="file" />
-                    <input name="file3" type="file" />
-                    <input name="file4" type="text" />  
-                    <input name="file4" type="text" />  
                 </td>
             </tr>
             <tr>
