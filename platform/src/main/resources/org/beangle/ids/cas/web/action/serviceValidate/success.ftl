@@ -5,7 +5,7 @@
   <cas:authenticationSuccess>
     <cas:user>${principal.name}</cas:user>
       <cas:attributes>
-        <cas:userName>${principal.userName}</cas:userName>
+        <cas:userName>${principal.description}</cas:userName>
       [#if principal.details??]
       [#list principal.details?keys as key]
         <cas:${key}>${principal.details[key]}</cas:${key}>
