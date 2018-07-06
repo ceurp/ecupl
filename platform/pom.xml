@@ -2,20 +2,20 @@
   <parent>
     <groupId>org.openurp</groupId>
     <artifactId>openurp-parent</artifactId>
-    <version>0.2.12-SNAPSHOT</version>
+    <version>0.2.12</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>net.ceurp.ecupl</groupId>
-  <artifactId>ecupl-platform-webapp</artifactId>
+  <groupId>net.openurp.ecupl</groupId>
+  <artifactId>ecupl-ceurp-platform</artifactId>
   <version>0.0.4-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Ecupl Platform Webapp</name>
+  <name>Ecupl CEURP Platform</name>
 
   <properties>
-    <bundle.symbolicName>net.openurp.ecupl.platform.webapp</bundle.symbolicName>
-    <bundle.namespace>net.openurp.ecupl.platform</bundle.namespace>
-    <openurp.app.version>0.0.6-SNAPSHOT</openurp.app.version>
-    <openurp.platform.version>0.1.0-SNAPSHOT</openurp.platform.version>
+    <bundle.symbolicName>net.openurp.ecupl.ceurp.platform</bundle.symbolicName>
+    <bundle.namespace>net.openurp.ecupl.ceurp.platform</bundle.namespace>
+    <openurp.app.version>0.0.7</openurp.app.version>
+    <openurp.platform.version>0.1.1</openurp.platform.version>
   </properties>
 
   <dependencies>
@@ -31,7 +31,7 @@
     <dependency>
       <groupId>org.openurp.app</groupId>
       <artifactId>openurp-app-nav</artifactId>
-      <version>${openurp.app.version}</version>
+      <version>0.0.5</version>
     </dependency>
     <dependency>
       <groupId>org.openurp.platform</groupId>
