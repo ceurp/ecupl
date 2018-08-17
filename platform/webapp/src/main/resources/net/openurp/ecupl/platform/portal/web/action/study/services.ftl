@@ -14,7 +14,7 @@
       <td><a target="_blank" href="${webappBase}/edu/grade/student/course.action"><img border="0" src="${static_base}/platform/0.0.5/images/app/default.gif">我的成绩</a></td>
     </tr>
     <tr>
-      <td height="23" colspan="2"><a target="_blank" href="${webappBase}/edu/lesson/student/timetable.action"><img border="0" src="${static_base}/platform/0.0.5/images/app/default.gif">我的课表</a></td>
+      <td height="23" colspan="2"><a target="_blank" href="${webappBase}/edu/course/student/timetable.action"><img border="0" src="${static_base}/platform/0.0.5/images/app/default.gif">我的课表</a></td>
     </tr>
   </tbody>
 </table>

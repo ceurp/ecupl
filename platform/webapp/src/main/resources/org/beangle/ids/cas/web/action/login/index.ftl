@@ -10,15 +10,19 @@
     <meta http-equiv="expires" content="0"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>华东政法大学继续教育学院教学认证系统</title>
-    <link rel="stylesheet" href="${base}/static/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="${base}/static/bootstrap/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="${base}/static/css/login.css" />
+    <link rel="stylesheet" href="${static_base}/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${static_base}/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="${static_base}/platform/0.0.5/css/login.css?v=20180414" />
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
 
 <div class="logindiv">
     <div style="position : absolute;top : 15px;left : 20px;">
-    <image style="width:532px;height:80px" src="${base}/static/images/banner1.jpg"/>
+    <image style="width:532px;height:80px" src="${static_base}/platform/0.0.5/images/banner1.jpg"/>
     </div>
     <div class="banner2"></div>
     <form name="loginForm" action="${base}/cas/login"  enctype="multipart/form-data" target="_top" method="post">
@@ -31,7 +35,7 @@
         <table class="bulletin">
             <tr>
                 <td>
-                <image style="width:530px;height:230px" src="${base}/static/images/tu2.jpg"/>
+                <image style="width:530px;height:230px" src="${static_base}/platform/0.0.5/images/tu2.jpg"/>
                 </td>
             </tr>
         </table>
@@ -42,7 +46,8 @@
             <tr>
                 <td><label for="username">用户名:&nbsp;</label></td>
                 <td>
-                    <input name="username" id="username" tabindex="1" title="请输入用户名" type="text" value="${(Parameters['username']?html)!}" style="width:105px;"/>
+                    <input name="username" id="username" tabindex="1" title="请输入用户名" autofocus="autofocus"
+                        type="text" value="${(Parameters['username']?html)!}" style="width:105px;"/>
                 </td>
             </tr>
             <tr>
