@@ -56,7 +56,7 @@ table.reportFoot.tr {
 [/#macro]
 
 [#macro gaReportHead clazz squad]
-<table align="center" style="text-align:center" cellpadding="0" cellspacing="0">
+<table align="center" style="text-align:center;margin-top:7px" cellpadding="0" cellspacing="0">
         <tr>
             <td style="font-weight:bold;font-size:14pt" height="30px">
             [@i18nName clazz.project.school!/](${clazz.semester.schoolYear}学年${clazz.semester.name}学期)
@@ -89,7 +89,7 @@ table.reportFoot.tr {
         <tr>
           <td align="left">院系:[@i18nName clazz.enrollment.depart!/]</td>
           <td colspan="3">成绩类型:
-            [#list gradeTypes as gradeType][#if gradeType.id!=GA.id]&nbsp;${(gradeType.name)!}(__％)[/#if][/#list]
+            [#list gradeTypes as gradeType][#if gradeType.id!=GA.id]&nbsp;${(gradeType.name)!}(${courseGradeState.getPercent(gradeType)!('___')}％)[/#if][/#list]
           </td>
         </tr>
     </table>
@@ -105,8 +105,8 @@ table.reportFoot.tr {
   </table>
 [/#macro]
 
-[#macro makeupReportHead clazz]
-<table align="center" style="text-align:center" cellpadding="0" cellspacing="0">
+[#macro makeupReportHead clazz squad]
+<table align="center" style="text-align:center;margin-top:7px" cellpadding="0" cellspacing="0">
         <tr>
             <td style="font-weight:bold;font-size:14pt" height="30px">
             [@i18nName clazz.project.school!/](${clazz.semester.schoolYear}学年${clazz.semester.name}学期)
@@ -114,7 +114,7 @@ table.reportFoot.tr {
              </td>
         </tr>
     </table>
-    <table width='95%' class="reportTitle" align='center'>
+    <table width='100%' class="reportTitle" align='center'>
         <tr>
             <td width="30%">课程名称:[@i18nName clazz.course!/]</td>
             <td width="25%">${b.text("attr.courseNo")}:${clazz.course.code}</td>
@@ -123,10 +123,9 @@ table.reportFoot.tr {
         </tr>
         <tr>
             <td>班级名称:
-            [#assign len = (clazz.name)?length/]
-            [#assign teachclassName = clazz.name!/]
+            [#assign len = (squad)?length/]
+            [#assign teachclassName = (squad)!/]
             [#assign max = 14/]
-            [#assign teachclassName = clazz.name!/]
             [#if len>max]
                 ${teachclassName?substring(0,max)}...
             [#else]
@@ -135,46 +134,50 @@ table.reportFoot.tr {
             </td>
             <td>${b.text("common.courseType")}:[@i18nName clazz.courseType!/]</td>
             <td>考核方式:[@i18nName clazz.examMode!/]</td>
-            <td align="left">人数:${(courseTakerMap.get(clazz)?size)!0}</td>
+            <td align="left">人数:${(courseTakers?size)!0}</td>
         </tr>
         <tr>
           <td align="left">院系:[@i18nName clazz.teachDepart!/]</td>
-          <td colspan="3"></td>
+          <td colspan="2">百分比:
+          平时${(courseGradeState.getPercent(USUAL)!('___'))!}％,考试${(courseGradeState.getPercent(END)!('___'))!}％
+          </td>
+          <td></td>
         </tr>
     </table>
 [/#macro]
 
 [#macro gaColumnTitle]
 <tr align="center" class="columnTitle">
-         <td class="columnIndexTitle" width="6%">${b.text("attr.index")}</td>
-         <td width="18%">${b.text("attr.stdNo")}</td>
-         <td width="10%">${b.text("attr.personName")}</td>
-         <td width="11%">学生签名</td>
-         <td width="9%">修读类别</td>
-         [#list gradeTypes as gradeType]<td width="${36/gradeTypes?size}%">${gradeType.name}</td>[/#list]
-         <td width="10%">备注</td>
-       </tr>
+ <td class="columnIndexTitle" width="6%">${b.text("attr.index")}</td>
+ <td width="18%">${b.text("attr.stdNo")}</td>
+ <td width="10%">${b.text("attr.personName")}</td>
+ <td width="11%">学生签名</td>
+ <td width="9%">修读类别</td>
+ [#list gradeTypes as gradeType]<td width="${36/gradeTypes?size}%">${gradeType.name}</td>[/#list]
+ <td width="10%">备注</td>
+</tr>
 [/#macro]
 
 [#macro makeupColumnTitle]
 <tr align="center" class="columnTitle">
-         [#list 1..2 as i]
-         <td class="columnIndexTitle" width="5%">${b.text("attr.index")}</td>
-         <td width="15%">${b.text("attr.stdNo")}</td>
-         <td width="10%">${b.text("attr.personName")}</td>
-         <td width="10%">成绩类型</td>
-         <td width="10%">成绩</td>
-         [/#list]
-       </tr>
+ <td class="columnIndexTitle" width="6%">${b.text("attr.index")}</td>
+ <td width="17%">${b.text("attr.stdNo")}</td>
+ <td width="10%">${b.text("attr.personName")}</td>
+ <td width="11%">学生签名</td>
+ <td width="9%">修读类别</td>
+ <td width="7%">平时</td>
+ <td width="7%">考试</td>
+ <td width="7%">总评</td>
+ <td width="26%">备注</td>
+</tr>
 [/#macro]
 
 [#macro makeupReportFoot (clazz)]
-    <table align="center" class="reportFoot" width="95%">
+    <table align="center" class="reportFoot" width="100%" style="height: 30px;">
       <tr>
-      <td width="20%">统计人数:${courseTakerMap.get(clazz)?size}</td>
-      <td width="20%"></td>
-      <td width="30%">教师签名:</td>
-      <td width="30%">成绩录入日期:____年__月__日</td>
+      <td width="20%">统计人数:${courseTakers?size}</td>
+      <td width="40%">教师签名:</td>
+      <td width="40%">成绩录入日期:______年____月____日</td>
     </tr>
   </table>
 [/#macro]
@@ -190,7 +193,16 @@ table.reportFoot.tr {
     [#if courseTaker.takeType.id==5]
     <td colspan="3">[#if courseGrades.get(courseTaker.std)??]${courseGrades.get(courseTaker.std).remark!}[/#if]</td>
     [#else]
-    [#list gradeTypes as gradeType]<td></td>[/#list]
+    [#list gradeTypes as gradeType]
+    <td>
+      [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
+        [#local et = examTakers.get(courseTaker.std)/]
+        [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
+        ${et.examStatus.name}
+        [/#if]
+      [/#if]
+    </td>
+    [/#list]
     [/#if]
     <td></td>
 [#else]
@@ -209,17 +221,36 @@ table.reportFoot.tr {
 [#macro displayMakeupTake(courseTakers, objectIndex)]
 [#if courseTakers[objectIndex]??]
     [#assign courseTaker = courseTakers[objectIndex]/]
+     [#local cg =courseGrades.get(courseTaker.std)]
+     [#local et =examTakers.get(courseTaker.std)]
     <td class="columnIndex">${objectIndex + 1}</td>
     <td>${courseTaker.std.user.code!}</td>
-    <td>${courseTaker.std.user.name!}[#if courseTaker.takeType?exists && courseTaker.takeType.id != 1]<sup>${courseTaker.takeType.name}</sup>[/#if]</td>
-    <td>${stdExamTakerMap[courseTaker.clazz.id?string+"_"+courseTaker.std.id?string].examType.name}</td>
+    <td>${courseTaker.std.user.name!}</td>
     <td></td>
+    <td>${courseTaker.takeType.name}</td>
+    <td>
+    [#if et.examType.name?index_of('缓')> -1]
+    ${(courseGrades.get(courseTaker.std).getScoreText(USUAL))!}
+    [#else]
+    --
+    [/#if]
+    </td>
+    <td></td>
+    <td></td>
+    <td style="font-size:0.8em">
+     [#if et.examType.name?index_of('缓')> -1]
+            初考缓考(平时分：${(courseGrades.get(courseTaker.std).getScoreText(USUAL))!})[#t]
+     [#else]
+     [#if ((cg.getExamGrade(END).examStatus.id)!0) != 1]
+             初考${(cg.getExamGrade(END).examStatus.name)!}[#t]
+     [#else]
+      初考不及格[#t]
+     [/#if],无平时分最高60[#t]
+     [/#if]
+    </td>
 [#else]
     <td class="columnIndex"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    [#list 1..8 as i]<td></td>[/#list]
 [/#if]
 [/#macro]
 

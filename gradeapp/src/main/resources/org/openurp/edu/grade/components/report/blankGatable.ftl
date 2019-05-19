@@ -9,12 +9,14 @@
   bar.addClose();
 [/@]
 [#list clazzes as clazz]
-    [#assign allCourseTakers = courseTakerMap.get(clazz)?sort_by(["std","code"])/]
     [#assign courseGrades = courseGradeMap.get(clazz)/]
+    [#assign examTakers = examTakerMap.get(clazz)/]
+    [#assign courseGradeState = stateMap.get(clazz)/]
 
     [#assign squadCourseTakers={}/]
     [#assign retakeCourseTakers=[]/]
 
+    [#assign allCourseTakers = courseTakerMap.get(clazz)?sort_by(["std","code"])/]
     [#list allCourseTakers as ct]
       [#if ct.takeType.id ==3]
         [#assign retakeCourseTakers=retakeCourseTakers+[ct]/]
@@ -25,8 +27,7 @@
         [#assign squadCourseTakers = squadCourseTakers + {ct.std.squad.name: squadCourseTakers[ct.std.squad.name]+[ct]} /]
       [/#if]
     [/#list]
-
-    [#assign squads = squadCourseTakers?keys/]
+    [#assign squads = squadCourseTakers?keys?sort/]
     [#list squads as squad]
        [#assign squadCourseTakers=squadCourseTakers+{squad:squadCourseTakers[squad]?sort_by(["std","user","code"])}/]
     [/#list]
