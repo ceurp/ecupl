@@ -96,12 +96,12 @@ table.reportFoot.tr {
 [/#macro]
 
 [#macro gaReportFoot(clazz)]
-    <table align="center" class="reportFoot" width="100%" style="height: 30px;">
+  <table align="center" class="reportFoot" width="100%" style="height: 30px;">
       <tr>
       <td width="20%">统计人数:${courseTakers?size}</td>
       <td width="40%">教师签名:</td>
       <td width="40%">成绩录入日期:______年____月____日</td>
-    </tr>
+     </tr>
   </table>
 [/#macro]
 
