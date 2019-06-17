@@ -1,13 +1,12 @@
 [#ftl]
 [@b.head/]
 [#include "/template/macros.ftl"/]
-[#assign perRecordOfPage = 50/]
-[#include "blankMacros.ftl"/]
-[#include "reportStyle.ftl"/]
+[#assign perRecordOfPage = 30/]
+[#include "examBlankMacros.ftl"/]
 [@reportStyle/]
-[@b.toolbar title="教学班补缓登分表打印"]
-   bar.addPrint();
-   bar.addClose();
+[@b.toolbar title="教学班总评成绩登分表打印"]
+  bar.addPrint();
+  bar.addClose();
 [/@]
 [#list clazzes as clazz]
     [#assign courseGrades = courseGradeMap.get(clazz)/]
@@ -16,7 +15,6 @@
 
     [#assign squadCourseTakers={}/]
     [#assign retakeCourseTakers=[]/]
-    [#assign squadMap={}/]
 
     [#assign allCourseTakers = courseTakerMap.get(clazz)?sort_by(["std","code"])/]
     [#list allCourseTakers as ct]
@@ -24,46 +22,34 @@
         [#assign retakeCourseTakers=retakeCourseTakers+[ct]/]
       [#else]
         [#if !(squadCourseTakers[ct.std.squad.name])??]
-          [#assign squadMap = squadMap+ {ct.std.squad.name:ct.std.squad}/]
           [#assign squadCourseTakers = squadCourseTakers+ {ct.std.squad.name:[]}/]
         [/#if]
         [#assign squadCourseTakers = squadCourseTakers + {ct.std.squad.name: squadCourseTakers[ct.std.squad.name]+[ct]} /]
       [/#if]
     [/#list]
-
-    [#assign squads =squadCourseTakers?keys/]
-    [#list clazz.enrollment.courseTakers as ct]
-      [#if ct.takeType.id !=3 && !squads?seq_contains(ct.std.squad.name)]
-        [#assign squads = squads + [ct.std.squad.name]/]
-        [#assign squadCourseTakers = squadCourseTakers+ {ct.std.squad.name:[]}/]
-      [/#if]
-    [/#list]
-
-    [#assign squads = squads?sort/]
+    [#assign squads = squadCourseTakers?keys?sort/]
     [#list squads as squad]
        [#assign squadCourseTakers=squadCourseTakers+{squad:squadCourseTakers[squad]?sort_by(["std","user","code"])}/]
     [/#list]
     [#assign squadCourseTakers=squadCourseTakers+{squads?last:(squadCourseTakers[squads?last]+retakeCourseTakers?sort_by(["std","user","code"]))}/]
     [#list squads as squad]
-        [#assign courseTakers=squadCourseTakers[squad]/]
-        [#if courseTakers?size==0][#continue/][/#if]
         [#assign recordIndex = 0/]
+        [#assign courseTakers=squadCourseTakers[squad]/]
         [#assign pageSize = ((courseTakers?size / perRecordOfPage)?int * perRecordOfPage == courseTakers?size)?string(courseTakers?size / perRecordOfPage, courseTakers?size / perRecordOfPage + 1)?number/]
         [#list (pageSize == 0)?string(0, 1)?number..pageSize as pageIndex]
 
-        [@makeupReportHead clazz squadMap[squad]/]
+        [@gaReportHead clazz squad/]
         <table align="center" class="reportBody" width="100%">
-           [@makeupColumnTitle clazz/]
-            [#list 0..(perRecordOfPage / 2 - 1) as onePageRecordIndex]
+           [@gaColumnTitle/]
+           [#list 0..perRecordOfPage-1 as onePageRecordIndex]
            <tr>
-            [@displayMakeupTake clazz,courseTakers, recordIndex,true/]
-            [@displayMakeupTake clazz,courseTakers, recordIndex + perRecordOfPage / 2 ,false/]
+        [@displayGaTake courseTakers, recordIndex/]
             [#assign recordIndex = recordIndex + 1/]
            </tr>
            [/#list]
            [#assign recordIndex = perRecordOfPage * pageIndex/]
         </table>
-        [@makeupReportFoot clazz/]
+        [@gaReportFoot clazz/]
             [#if (pageIndex + 1 < pageSize)]
         <div style="PAGE-BREAK-AFTER: always;"></div>
             [/#if]
@@ -76,4 +62,5 @@
     <div style="PAGE-BREAK-AFTER: always"></div>
     [/#if]
 [/#list]
+
 [@b.foot/]

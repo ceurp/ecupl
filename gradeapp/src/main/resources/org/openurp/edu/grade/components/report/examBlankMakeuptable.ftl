@@ -1,9 +1,8 @@
 [#ftl]
 [@b.head/]
 [#include "/template/macros.ftl"/]
-[#assign perRecordOfPage = 50/]
+[#assign perRecordOfPage = 30/]
 [#include "blankMacros.ftl"/]
-[#include "reportStyle.ftl"/]
 [@reportStyle/]
 [@b.toolbar title="教学班补缓登分表打印"]
    bar.addPrint();
@@ -16,7 +15,6 @@
 
     [#assign squadCourseTakers={}/]
     [#assign retakeCourseTakers=[]/]
-    [#assign squadMap={}/]
 
     [#assign allCourseTakers = courseTakerMap.get(clazz)?sort_by(["std","code"])/]
     [#list allCourseTakers as ct]
@@ -24,7 +22,6 @@
         [#assign retakeCourseTakers=retakeCourseTakers+[ct]/]
       [#else]
         [#if !(squadCourseTakers[ct.std.squad.name])??]
-          [#assign squadMap = squadMap+ {ct.std.squad.name:ct.std.squad}/]
           [#assign squadCourseTakers = squadCourseTakers+ {ct.std.squad.name:[]}/]
         [/#if]
         [#assign squadCourseTakers = squadCourseTakers + {ct.std.squad.name: squadCourseTakers[ct.std.squad.name]+[ct]} /]
@@ -51,13 +48,12 @@
         [#assign pageSize = ((courseTakers?size / perRecordOfPage)?int * perRecordOfPage == courseTakers?size)?string(courseTakers?size / perRecordOfPage, courseTakers?size / perRecordOfPage + 1)?number/]
         [#list (pageSize == 0)?string(0, 1)?number..pageSize as pageIndex]
 
-        [@makeupReportHead clazz squadMap[squad]/]
+        [@makeupReportHead clazz squad/]
         <table align="center" class="reportBody" width="100%">
-           [@makeupColumnTitle clazz/]
-            [#list 0..(perRecordOfPage / 2 - 1) as onePageRecordIndex]
+           [@makeupColumnTitle/]
+           [#list 0..perRecordOfPage-1 as onePageRecordIndex]
            <tr>
-            [@displayMakeupTake clazz,courseTakers, recordIndex,true/]
-            [@displayMakeupTake clazz,courseTakers, recordIndex + perRecordOfPage / 2 ,false/]
+        [@displayMakeupTake courseTakers, recordIndex/]
             [#assign recordIndex = recordIndex + 1/]
            </tr>
            [/#list]
