@@ -82,10 +82,16 @@
     width:100%;
     font-size:10pt;
    }
+   .gradeHead tr{
+     height:25px;
+   }
    .gradeFoot{
     font-family: 宋体;
     width:100%;
     font-size:10pt;
+   }
+   table.gradeTable tr{
+     height:36px;
    }
    table.gradeTable td.columnSeparator{
       border-width:0 0px 0px 0;
@@ -99,7 +105,7 @@
     }
 </style>
 [#list students as std]
-<h2 style="text-align:center;font-family:宋体;font-size:23pt">华东政法大学夜大学生成绩表</h2>
+<h2 style="text-align:center;font-family:宋体;font-size:23pt;margin-top:35px">华东政法大学夜大学生成绩表</h2>
 
 [#function buildSemesterCode courseGrade]
   [#if courseGrade.courseTakeType.id=3 || courseGrade.crn?? && courseGrade.crn?starts_with("BK")]
@@ -211,15 +217,6 @@
     [/#if]
   </tr>
     [/#list]
-</table>
-
-[@b.div style="margin-top:5px;"/]
-
-<table align="center" class="gradeFoot">
-    <tr><td colspan="4">&nbsp;</td></tr>
-    <tr>
-      <td style="text-align:right">${(b.now?string('yyyy年MM月dd日'))!}</td>
-   </tr>
 </table>
 <div style="PAGE-BREAK-AFTER: always"></div>
 [/#list]

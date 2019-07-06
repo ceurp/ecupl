@@ -2,6 +2,7 @@
 <beans>
     <bean id="gpaPolicy">
         <property name="useArithmeticAvg" value="true"/>
+        <property name="precision" value="0"/>
     </bean>
 
 </beans>

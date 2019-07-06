@@ -73,7 +73,7 @@
       [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
         [#local et = examTakers.get(courseTaker.std)/]
         [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
-        ${et.examStatus.name}
+        ${et.examStatus.name}[#if et.examStatus.deferred]●[/#if]
         [/#if]
       [/#if]
       </td>
@@ -93,7 +93,7 @@
         [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
         [#local et = examTakers.get(courseTaker.std)/]
         [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
-        ${et.examStatus.name}
+        ${et.examStatus.name}[#if et.examStatus.deferred]●[/#if]
         [/#if]
       [/#if]
      </td>
