@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.openurp</groupId>
     <artifactId>openurp-java-parent</artifactId>
-    <version>0.2.29</version>
+    <version>0.3.2</version>
   </parent>
   <groupId>net.openurp.ecupl</groupId>
   <artifactId>openurp-ceurp-parent</artifactId>

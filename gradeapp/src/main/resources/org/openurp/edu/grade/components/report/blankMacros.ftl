@@ -68,13 +68,16 @@
       [/#if]
       <td>免试</td>
     [#else]
+     [#assign gaScore="&nbsp;"/]
      [#list gradeTypes as gradeType]
       <td>
       [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
         [#local et = examTakers.get(courseTaker.std)/]
         [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
-        ${et.examStatus.name}[#if et.examStatus.deferred]●[/#if]
+        ${et.examStatus.name}[#assign gaScore][#if et.examStatus.deferred]●[#elseif et.examStatus.id=3]/[/#if][/#assign]
         [/#if]
+      [#else]
+        ${gaScore!}
       [/#if]
       </td>
     [/#list]
@@ -90,7 +93,7 @@
     [#list gradeTypes as gradeType]
       [#if gradeType.id==2]
      <td>
-        [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
+      [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
         [#local et = examTakers.get(courseTaker.std)/]
         [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
         ${et.examStatus.name}[#if et.examStatus.deferred]●[/#if]

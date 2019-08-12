@@ -120,7 +120,6 @@
    [#else]
     [#--start考查课--]
     [#if courseGrade.courseTakeType.id=5]
-      <td></td>
       <td>免试</td>
     [#else]
 
