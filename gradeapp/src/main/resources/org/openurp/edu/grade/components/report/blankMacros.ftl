@@ -185,7 +185,7 @@
      [#local et =examTakers.get(courseTaker.std)]
     <td class="columnIndex">${objectIndex + 1}</td>
     <td>${courseTaker.std.user.code!}</td>
-    <td>${courseTaker.std.user.name!}</td>
+    <td>${courseTaker.std.user.name!}[#if et.examType.name?index_of('缓')> -1]●[/#if]</td>
 
    [#if ((clazz.course.examMode.name)!"")?contains("考试")]
      <td>
