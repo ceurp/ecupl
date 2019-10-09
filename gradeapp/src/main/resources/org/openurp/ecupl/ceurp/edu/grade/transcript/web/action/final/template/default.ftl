@@ -52,8 +52,8 @@
   [#assign finded=false/]
      [#list grade.gaGrades as ga]
        [#if ga.gradeType.id=9]
-        [#assign findMakeupExam=false/]
         [#if ga.scoreText?? && ga.scoreText?length>0]${ga.scoreText}[#else]
+            [#assign findMakeupExam=false/]
             [#list grade.examGrades as eg]
               [#if eg.gradeType.id=4]
                [#assign findMakeupExam=true/]
@@ -70,42 +70,75 @@
 [/#macro]
 
 <style>
-  .gradeTable {
-    font-size:9pt;
-    border-collapse:collapse;
-    width:100%;
-    font-family: 宋体;
-   }
-  .gradeTable td { border: solid #000 1px; text-align:center}
-  .gradeHead {
-    font-family: 黑体;
-    width:100%;
-    font-size:10pt;
-   }
-   .gradeHead tr{
-     height:25px;
+   .reportTitle{
+      border-width:1px;
+      font-size:9pt;
+      font-weight:bold;
+      font-family:黑体
    }
    .gradeFoot{
     font-family: 宋体;
     width:100%;
     font-size:10pt;
    }
-   table.gradeTable tr{
-     height:36px;
+   .reportHead{
+     text-align:center;font-family:宋体;font-size:23pt;margin-top:0px;
    }
-   table.gradeTable td.columnSeparator{
+  .zsb_GradeTable {
+    font-size:9pt;
+    border-collapse:collapse;
+    width:100%;
+    font-family: 宋体;
+   }
+  .zsb_GradeTable td { border: solid #000 1px; text-align:center}
+  .zsb_GradeHead {
+    font-family: 黑体;
+    width:100%;
+    font-size:10pt;
+   }
+   table.zsb_GradeTable td.columnSeparator{
       border-width:0 0px 0px 0;
       width:1%;
     }
-   .reportTitle{
-      border-width:1px;
-      font-size:9pt;
-      font-weight:bold;
-      font-family:黑体
-    }
+   table.zsb_GradeHead tr{
+     height:25px;
+   }
+   table.zsb_GradeTable tr{
+     height:10mm;
+   }
+
+   table.zsbmin_GradeTable tr{
+     height:8.5mm;
+   }
+     .gqb_GradeTable {
+       font-size:9pt;
+       border-collapse:collapse;
+       width:100%;
+       font-family: 宋体;
+      }
+     .gqb_GradeTable td { border: solid #000 1px; text-align:center}
+     .gqb_GradeHead {
+       font-family: 黑体;
+       width:100%;
+       font-size:10pt;
+      }
+      table.gqb_GradeTable td.columnSeparator{
+         border-width:0 0px 0px 0;
+         width:1%;
+       }
+      table.gqb_GradeHead tr{
+        height:20px;
+      }
+      table.gqb_GradeTable tr{
+        height:8.5mm;
+      }
+      table.gqbmin_GradeTable tr{
+        height:7.5mm;
+      }
 </style>
 [#list students as std]
-<h2 style="text-align:center;font-family:宋体;font-size:23pt;margin-top:35px">华东政法大学夜大学生成绩表</h2>
+[#assign isGQB = (std.level.name == '高起本')]
+<h2 class="reportHead">华东政法大学夜大学生成绩表</h2>
 
 [#function buildSemesterCode courseGrade]
   [#if courseGrade.courseTakeType.id=3 || courseGrade.crn?? && courseGrade.crn?starts_with("BK")]
@@ -141,15 +174,34 @@
 [#assign totalSize=stdGrades?size/]
 [#assign semesterCodes = stdGradesMap?keys?sort/]
 [#assign _pageSize=0/]
+[#assign maxSemesterPerColumn=4]
+[#if isGQB]
+  [#assign maxSemesterPerColumn=5] [#--高起本左侧多打一个学期--]
+[/#if]
+
 [#list semesterCodes as semesterCode]
-  [#assign _pageSize=+_pageSize+stdGradesMap[semesterCode]?size/]
-  [#if semesterCode_index > 2] [#-- 最多显示四个学期 --]
+  [#assign _pageSize = _pageSize + stdGradesMap[semesterCode]?size/]
+  [#if semesterCode_index + 2 > maxSemesterPerColumn] [#-- 最多显示maxSemesterPerColumn个学期 --]
     [#break/]
   [/#if]
 [/#list]
+[#if _pageSize *2 < totalSize]
+    [#assign newStdGrades= stdGrades[0.._pageSize-1]]
+    [#list 1 .. totalSize - 2*_pageSize as i]
+        [#assign newStdGrades = newStdGrades + ["null"]]
+    [/#list]
+    [#assign newStdGrades =newStdGrades + stdGrades[_pageSize..totalSize-1]]
+    [#assign stdGrades = newStdGrades]
+    [#assign _pageSize = totalSize - _pageSize/]
+[/#if ]
 
+[#if isGQB]
+   [#assign scale_min = _pageSize > 25]
+[#else]
+   [#assign scale_min = _pageSize > 20]
+[/#if]
 [#assign printedSemesterCodes=[]/]
-<table align="center" class="gradeHead">
+<table align="center" class="${isGQB?string("gqb_GradeHead","zsb_GradeHead")}">
    <tr>
      <td width="20%">学习形式：${std.studyType.name}</td>
      <td width="19.5%">学历层次：${std.level.name}</td>
@@ -166,7 +218,7 @@
    </tr>
 </table>
 
-<table class="gradeTable" align="center">
+<table class="${isGQB?string("gqb_GradeTable","zsb_GradeTable")} [#if scale_min]${isGQB?string("gqbmin_GradeTable","zsbmin_GradeTable")}[/#if]" align="center">
     <tr align="center" class="reportTitle">
       [#list 1..2 as i]
            <td width="8.5%">学期</td>
@@ -180,15 +232,16 @@
            [/#if]
       [/#list]
     </tr>
+    [#if _pageSize>0]
     [#list 0.._pageSize-1 as i]
   <tr>
-    [#if stdGrades[i]??]
+    [#if stdGrades[i]?? && (stdGrades[i]?is_hash)]
     [#assign courseGrade = stdGrades[i] /]
 
     [#assign semesterCode=buildSemesterCode(courseGrade)]
     [#if !printedSemesterCodes?seq_contains(semesterCode)]
      [#assign printedSemesterCodes=printedSemesterCodes+[semesterCode]/]
-     <td rowspan="${stdGradesMap[semesterCode]?size}">${courseGrade.semester.schoolYear!}学年${courseGrade.semester.name!}学期</td>
+     <td rowspan="${stdGradesMap[semesterCode]?size}">${courseGrade.semester.schoolYear!}学年<br>${courseGrade.semester.name!}学期</td>
     [/#if]
     <td>${stdGradeIndice[courseGrade.id?string]!}</td>
     <td>[@i18nName courseGrade.course!/]</td>
@@ -196,7 +249,8 @@
     <td>[@displayFinal  courseGrade/]</td>
     <td>[@displayMakeup courseGrade/]</td>
     [#else]
-    <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+    <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+    <td>&nbsp;</td><td>/</td><td>/</td>
     [/#if]
 
     <td class="columnSeparator"></td>
@@ -205,7 +259,7 @@
     [#assign semesterCode=buildSemesterCode(courseGrade)]
     [#if !printedSemesterCodes?seq_contains(semesterCode)]
      [#assign printedSemesterCodes=printedSemesterCodes+[semesterCode]/]
-     <td rowspan="${stdGradesMap[semesterCode]?size}">${courseGrade.semester.schoolYear!}学年${courseGrade.semester.name!}学期</td>
+     <td rowspan="${stdGradesMap[semesterCode]?size}">${courseGrade.semester.schoolYear!}学年<br>${courseGrade.semester.name!}学期</td>
     [/#if]
     <td>${stdGradeIndice[courseGrade.id?string]!}</td>
     <td>[@i18nName courseGrade.course! /]</td>
@@ -213,10 +267,12 @@
     <td>[@displayFinal  courseGrade/]</td>
     <td>[@displayMakeup courseGrade/]</td>
     [#else]
-    <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+    <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+    <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
     [/#if]
   </tr>
     [/#list]
+    [/#if][#-- _pageSize > 0 --]
 </table>
 <div style="PAGE-BREAK-AFTER: always"></div>
 [/#list]
