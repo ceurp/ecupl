@@ -4,7 +4,7 @@
 <table align="center" style="text-align:center;margin-top: 15px;" cellpadding="0" cellspacing="0">
         <tr>
             <td style="font-weight:bold;font-size:22pt;font-family:宋体" height="30px">
-            [@i18nName report.clazz.project.school!/]夜大学生${(report.clazz.course.examMode.name)!}成绩登分表
+            华东政法大学夜大学生${(report.clazz.course.examMode.name)!}成绩登分表
              <td>
         </tr>
         <tr>

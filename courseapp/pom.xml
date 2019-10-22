@@ -5,9 +5,14 @@
     <artifactId>openurp-ceurp-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>ceurp-ecupl-gradeapp</artifactId>
+  <artifactId>ceurp-ecupl-courseapp</artifactId>
   <packaging>war</packaging>
-  <name>Ecupl CEURP GradeApp</name>
+  <name>Ecupl CEURP CourseApp</name>
+
+  <properties>
+    <bundle.symbolicName>org.openurp.edu.course.adminapp</bundle.symbolicName>
+    <bundle.namespace>org.openurp.edu.course</bundle.namespace>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -15,20 +20,18 @@
       <artifactId>openurp-edu-nav-default</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.grade</groupId>
-      <artifactId>openurp-edu-grade-course</artifactId>
+      <groupId>org.openurp.edu.course</groupId>
+      <artifactId>openurp-edu-course-schedule</artifactId>
+      <version>${openurp.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.grade</groupId>
-      <artifactId>openurp-edu-grade-report</artifactId>
+      <groupId>org.openurp.edu.course</groupId>
+      <artifactId>openurp-edu-course-election</artifactId>
+      <version>${openurp.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.grade</groupId>
-      <artifactId>openurp-edu-grade-teacher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.openurp.edu.grade</groupId>
-      <artifactId>openurp-edu-grade-core4j</artifactId>
+      <groupId>org.openurp.edu.course</groupId>
+      <artifactId>openurp-edu-course-teacher</artifactId>
       <version>${openurp.version}</version>
     </dependency>
   </dependencies>

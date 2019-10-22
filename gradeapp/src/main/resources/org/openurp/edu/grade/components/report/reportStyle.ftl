@@ -14,7 +14,7 @@
 table.reportBody td{
     border-style:solid;
     border-color:#006CB2;
-    border-width:0 1px 1px 0;
+    border-width:1px 1px;
 }
 
 table.reportBody td.columnIndex{
@@ -30,7 +30,7 @@ table.reportBody tr{
   height:22pt;
 }
 table.reportTitle {
-  margin-top:20px;
+  margin-top:10px;
 }
 table.reportTitle tr{
   border-width:1px;

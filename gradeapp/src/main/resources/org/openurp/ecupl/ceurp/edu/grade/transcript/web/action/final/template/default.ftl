@@ -110,31 +110,31 @@
    table.zsbmin_GradeTable tr{
      height:8.5mm;
    }
-     .gqb_GradeTable {
+   .gqb_GradeTable {
        font-size:9pt;
        border-collapse:collapse;
        width:100%;
        font-family: 宋体;
-      }
-     .gqb_GradeTable td { border: solid #000 1px; text-align:center}
-     .gqb_GradeHead {
+    }
+   .gqb_GradeTable td { border: solid #000 1px; text-align:center}
+   .gqb_GradeHead {
        font-family: 黑体;
        width:100%;
        font-size:10pt;
-      }
-      table.gqb_GradeTable td.columnSeparator{
+    }
+    table.gqb_GradeTable td.columnSeparator{
          border-width:0 0px 0px 0;
          width:1%;
-       }
-      table.gqb_GradeHead tr{
-        height:20px;
-      }
-      table.gqb_GradeTable tr{
-        height:8.5mm;
-      }
-      table.gqbmin_GradeTable tr{
-        height:7.5mm;
-      }
+    }
+    table.gqb_GradeHead tr{
+      height:20px;
+    }
+    table.gqb_GradeTable tr{
+      height:10mm;
+    }
+    table.gqbmin_GradeTable tr{
+      height:8mm;
+    }
 </style>
 [#list students as std]
 [#assign isGQB = (std.level.name == '高起本')]

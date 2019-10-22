@@ -5,14 +5,16 @@
     <artifactId>openurp-java-parent</artifactId>
     <version>0.3.2</version>
   </parent>
-  <groupId>net.openurp.ecupl</groupId>
+  <groupId>net.openurp.ecupl.ceurp</groupId>
   <artifactId>openurp-ceurp-parent</artifactId>
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>OpenURP CE-Urp Parent</name>
+  <name>Ecupl CEURP Parent</name>
 
   <modules>
+    <module>courseapp</module>
     <module>gradeapp</module>
+    <module>finalmakeupapp</module>
   </modules>
 
   <properties>
