@@ -89,7 +89,7 @@ table.reportFoot tr {
      <table align="center" style="text-align:center;margin-top: 15px;" cellpadding="0" cellspacing="0">
          <tr>
              <td style="font-weight:bold;font-size:22pt;font-family:宋体" height="30px">
-             华东政法大学夜大学生成绩登分表（补）
+             华东政法大学夜大学生成绩登分表
               <td>
          </tr>
          <tr>
@@ -102,7 +102,6 @@ table.reportFoot tr {
          <td>专业：[#list task.squads as squad]${(squad.major.name)!}[/#list]</td>
          <td>年级：[#list task.squads as squad]${squad.grade}[/#list]</td>
          <td>课程名称：${task.course.name}</td>
-         <td style="text-align:right">任课教师：${(task.teacher.name)!}</td>
        </tr>
    </table>
    <table class="reportBody"  width="100%"  >

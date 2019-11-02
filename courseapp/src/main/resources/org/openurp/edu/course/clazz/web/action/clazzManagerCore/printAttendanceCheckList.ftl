@@ -84,10 +84,10 @@
     <table width="100%" border="0" class="reportBody">
        <tr align="center" class="columnTitle">
         <td width="3%">序号</td>
-        <td width="9%">[@msg.text name="attr.stdNo"/]</td>
+        <td width="11%">[@msg.text name="attr.stdNo"/]</td>
         <td width="7%">[@msg.text name="attr.personName"/]</td>
         <td width="4%">[@msg.text name="entity.gender"/]</td>
-        <td width="7%">[@msg.text name="修读类别"/]</td>
+        <td width="5%"><span style="font-size:0.8em">修读类别</span></td>
       [#list 1..units as i]
         <td width="${70/units}%">${i}</td>
       [/#list]
@@ -95,10 +95,12 @@
       [#list page.takers as taker]
         <tr  align="center">
           <td>${page.startIndex+taker_index+1}</td>
-          <td  style="font-size: 10px;">${taker.std.user.code}</td>
+          <td style="font-size: 10px;">${taker.std.user.code}</td>
           <td>${taker.std.user.name}[#if taskStdCollisionMap[clazz.id?string]?seq_contains(taker.std.id)]<font color="red">*</font>[/#if]</td>
           <td>[@i18nName taker.std.person.gender?if_exists/]</td>
-          <td>${(taker.takeType.name)!}[#if taker.freeListening]免听[/#if][#t/]</td>
+          <td>[#assign takeTypeName]${(taker.takeType.name)!}[#if taker.freeListening]免听[/#if][#t/][/#assign]
+          <span [#if takeTypeName?length>2]style="font-size:0.8em"[/#if]>${takeTypeName}</span>
+          </td>
           [#list 1..units as i]
           <td>&nbsp;</td>
           [/#list]

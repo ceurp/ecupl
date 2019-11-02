@@ -127,7 +127,7 @@
 <table align="center" style="text-align:center;margin-top: 15px;" cellpadding="0" cellspacing="0">
         <tr>
             <td style="font-weight:bold;font-size:22pt;font-family:宋体" height="30px">
-            [@i18nName clazz.project.school!/]夜大学生${(clazz.course.examMode.name)!}成绩登分表（补）
+            [@i18nName clazz.project.school!/]夜大学生${(clazz.course.examMode.name)!}成绩登分表
              <td>
         </tr>
         <tr>
@@ -140,7 +140,6 @@
         <td>专业：${(squad.major.name)!}</td>
         <td>年级：${squad.grade}</td>
         <td>课程名称：${clazz.course.name}</td>
-        <td style="text-align:right">任课教师：[#list clazz.teachers as t]${t.name}&nbsp;[/#list]</td>
       </tr>
     </table>
 [/#macro]
