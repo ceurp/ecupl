@@ -2,7 +2,11 @@
 ﻿[@b.head/]
 [@b.toolbar title='学生名单']
    bar.addItem("[@msg.text name="action.print"/]","print()");
+   bar.addItem("[@msg.text name="action.export"/]","export2Excel()");
    bar.addClose("");
+   function export2Excel(){
+      bg.form.submit(document.clazzForm);
+   }
 [/@]
 [#include '../clazzManagerCore/clazzFtlLib.ftl'/]
 <style type="text/css">
@@ -66,6 +70,13 @@ table.reportFoot tr {
   font-size:10px;
 }
 </style>
+[@b.form name="clazzForm"  action="!printStdList"]
+  [#list Parameters?keys as k]
+  <input type="hidden" name="${k}" value="${Parameters[k]}"/>
+  [/#list]
+  <input type="hidden" name="excel" value="1">
+  <input type="hidden" name="template" value="template/excel/clazzStdListSquad.xlsx">
+[/@]
 [#list clazzes! as clazz]
     [#list pages[clazz.id?string] as page]
 <table align="center" style="text-align:center;margin-top: 15px;" cellpadding="0" cellspacing="0">

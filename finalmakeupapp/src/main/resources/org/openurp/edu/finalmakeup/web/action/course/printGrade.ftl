@@ -109,13 +109,13 @@ table.reportFoot tr {
        <td width="5%">序号</td>
        <td width="15%">学号</td>
        <td width="9%">姓名</td>
-       <td width="20%">补考成绩</td>
+       <td width="20%">考试成绩</td>
        <td class="columnSeparator"></td>
        <td width="5%">序号</td>
        <td width="15%">学号</td>
        <td width="9%">姓名</td>
-       <td width="20%" >补考成绩</td>
-     </tr>
+       <td width="20%" >考试成绩</td>
+     </TR>
      [#list 0..pagePrintRow-1 as i]
      <tr class="brightStyle"  >
      [#if grades[i+passNo]?exists]

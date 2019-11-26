@@ -104,8 +104,7 @@ table.reportFoot tr {
              <td class="columnIndexTitle" width="5%">序号</td>
              <td width="15%">学号</td>
              <td width="9%">姓名</td>
-             <td width="10%">考试成绩</td>
-             <td width="10%">备注</td>
+             <td width="20%">考试成绩</td>
              [#if i ==1]
              <td class="columnSeparator"></td>
              [/#if]
@@ -117,21 +116,21 @@ table.reportFoot tr {
        <td>${i+1+passNo}</td>
        <td>${takes[i+passNo].std.user.code}</td>
        <td>${takes[i+passNo].std.user.name}</td>
-       [@emptyTd count=2/]
+       [@emptyTd count=1/]
        <td class="columnSeparator"></td>
 
        [#if takes[i+pagePrintRow+passNo]?exists]
        <td>${i+pagePrintRow+1+passNo}</td>
        <td>${takes[i+pagePrintRow+passNo].std.user.code}</td>
        <td>${takes[i+pagePrintRow+passNo].std.user.name}</td>
-       [@emptyTd count=2/]
+       [@emptyTd count=1/]
        [#elseif takes[i+passNo]?exists]
-          [@emptyTd count=5/]
+          [@emptyTd count=4/]
        [/#if]
       [#else]
-        [@emptyTd count=5/]
+        [@emptyTd count=4/]
         <td class="columnSeparator"></td>
-        [@emptyTd count=5/]
+        [@emptyTd count=4/]
       [/#if]
      </tr>
      [/#list]
