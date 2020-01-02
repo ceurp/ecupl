@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.openurp</groupId>
     <artifactId>openurp-java-parent</artifactId>
-    <version>0.3.11</version>
+    <version>0.3.14</version>
   </parent>
   <groupId>net.openurp.ecupl.ceurp</groupId>
   <artifactId>openurp-ceurp-parent</artifactId>
@@ -12,9 +12,10 @@
   <name>Ecupl CEURP Parent</name>
 
   <modules>
-    <module>courseapp</module>
-    <module>gradeapp</module>
-    <module>finalmakeupapp</module>
+    <module>course/adminapp</module>
+    <module>grade/adminapp</module>
+    <module>grade/studentapp</module>
+    <module>finalmakeup/adminapp</module>
   </modules>
 
   <properties>

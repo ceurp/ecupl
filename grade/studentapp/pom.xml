@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.openurp.ecupl.ceurp</groupId>
+    <artifactId>openurp-ceurp-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../..</relativePath>
+  </parent>
+  <artifactId>ceurp-ecupl-grade-studentapp</artifactId>
+  <packaging>war</packaging>
+  <name>Ecupl CEURP Grade StudentApp</name>
+
+  <properties>
+    <bundle.symbolicName>org.openurp.edu.grade.studentapp</bundle.symbolicName>
+    <bundle.namespace>org.openurp.edu.grade</bundle.namespace>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.openurp.edu.nav</groupId>
+      <artifactId>openurp-edu-nav-default</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.openurp.edu.grade</groupId>
+      <artifactId>openurp-edu-grade-student</artifactId>
+      <version>${openurp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openurp.edu.grade</groupId>
+      <artifactId>openurp-edu-grade-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.openurp.edu.graduation</groupId>
+      <artifactId>openurp-edu-graduation-core4j</artifactId>
+      <version>${openurp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
