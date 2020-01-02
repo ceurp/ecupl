@@ -6,9 +6,9 @@
     <version>0.0.1-SNAPSHOT</version>
 	<relativePath>../..</relativePath>
   </parent>
-  <artifactId>ceurp-ecupl-courseapp</artifactId>
+  <artifactId>ceurp-ecupl-course-adminapp</artifactId>
   <packaging>war</packaging>
-  <name>Ecupl CEURP CourseApp</name>
+  <name>Ecupl CEURP Course AdminApp</name>
 
   <properties>
     <bundle.symbolicName>org.openurp.edu.course.adminapp</bundle.symbolicName>

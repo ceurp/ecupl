@@ -7,10 +7,10 @@
     <version>0.3.14</version>
   </parent>
   <groupId>net.openurp.ecupl.ceurp</groupId>
-  <artifactId>ceurp-ecupl-finalmakeupapp</artifactId>
+  <artifactId>ceurp-ecupl-finalmakeup-adminapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Ecupl CEURP Finalmakeupapp</name>
+  <name>Ecupl CEURP Finalmakeup Adminapp</name>
 
   <dependencies>
     <dependency>
