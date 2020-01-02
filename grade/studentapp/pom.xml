@@ -26,10 +26,6 @@
       <version>${openurp.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.grade</groupId>
-      <artifactId>openurp-edu-grade-web</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.openurp.edu.graduation</groupId>
       <artifactId>openurp-edu-graduation-core4j</artifactId>
       <version>${openurp.version}</version>

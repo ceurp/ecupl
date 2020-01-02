@@ -4,6 +4,8 @@
 # Build output directies
 target
 
+work
+
 # Eclipse specific files/directories
 .classpath
 .project
