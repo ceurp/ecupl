@@ -41,9 +41,6 @@
             [@i18nName report.clazz.project.school!/]夜大学生${(report.clazz.course.examMode.name)!}成绩登分表
              <td>
         </tr>
-        <tr>
-          <td style="font-weight:bold;font-size:14pt;font-family:宋体" >（${(report.clazz.semester.schoolYear)?if_exists}学年${(report.clazz.semester.name)?if_exists?replace("0","第")}学期）</td>
-        </tr>
     </table>
     <table width='100%' class="reportTitle" align='center'>
       <tr>
@@ -157,13 +154,13 @@
          <td class="columnIndexTitle" width="4.4%">${b.text("attr.index")}</td>
          <td width="14%">${b.text("attr.stdNo")}</td>
          <td width="7.9%">${b.text("attr.personName")}</td>
-          [#if ((report.clazz.course.examMode.name)!"")?contains("考试")]
-          <td width="7.9%">平时成绩</td>
-          <td width="7.9%">考试成绩</td>
-          [#else]
-          <td width="15.8%">考试成绩</td>
-          [/#if]
+         [#if ((report.clazz.course.examMode.name)!"")?contains("考试")]
+         <td width="7.9%">平时成绩</td>
+         <td width="7.9%">考试成绩</td>
          <td width="7.9%">总成绩</td>
+         [#else]
+         <td width="23.7%">考查成绩</td>
+         [/#if]
          [#if i ==1]
          <td class="columnSeparator"></td>
          [/#if]
@@ -190,7 +187,6 @@
     <td>${courseGrade.std.user.code!}</td>
     <td>${courseGrade.std.user.name!}</td>
 
-
     [#if ((report.clazz.course.examMode.name)!"")?contains("考试")]
      <td>
       [#assign displayUsual=false/]
@@ -214,31 +210,34 @@
       [/#if]
      [/#list]
     </td>
-   [#else][#--start考查课--]
-     <td>
-     [#list report.gradeTypes as gradeType]
-      [#if !gradeType.ga && gradeType.id!=FINAL.id]
-      [#local examGrade=courseGrade.getGrade(gradeType)!"null"/]
-      [#if examGrade!="null"]
-        [#if !examGrade.gradingMode.numerical && (examGrade.scoreText!)?length>2]<span class="longScoreText">${examGrade.scoreText!}</span>[#else]${examGrade.scoreText!}[/#if][#if examGrade.examStatus?? && examGrade.examStatus.id!=1]<span class="examStatus"> ${examGrade.examStatus.name}</span>[/#if]
-      [/#if]
-      [/#if]
-     [/#list]
-    </td>
-   [/#if][#--end考查课--]
-   <td>
+    <td>
      [#list courseGrade.gaGrades as ga]
         [#if ga.gradeType.id!=GA.id]
           ${ga.scoreText!}
         [/#if]
       [/#list]
-   </td>
+    </td>
+   [#else][#--start考查课--]
+    <td>
+     [#list courseGrade.gaGrades as ga]
+        [#if ga.gradeType.id!=GA.id]${ga.scoreText!}[/#if]
+     [/#list]
+     [#list report.gradeTypes as gradeType]
+      [#if !gradeType.ga && gradeType.id!=FINAL.id]
+      [#local examGrade=courseGrade.getGrade(gradeType)!"null"/]
+      [#if examGrade != "null"]
+        [#if examGrade.examStatus?? && examGrade.examStatus.id!=1]<span class="examStatus">${examGrade.examStatus.name}</span>[/#if]
+      [/#if]
+      [/#if]
+     [/#list]
+    </td>
+   [/#if][#--end考查课--]
 [#else]
     <td class="columnIndex"></td>
     [#if ((report.clazz.course.examMode.name)!"")?contains("考试")]
      [#list 1..5 as i]<td></td>[/#list]
     [#else]
-    [#list 1..4 as i]<td></td>[/#list]
+    [#list 1..3 as i]<td></td>[/#list]
     [/#if]
 [/#if]
   [#if addSeparator]

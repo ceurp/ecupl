@@ -130,9 +130,6 @@
             [@i18nName clazz.project.school!/]夜大学生${(clazz.course.examMode.name)!}成绩登分表
              <td>
         </tr>
-        <tr>
-          <td style="font-weight:bold;font-size:14pt;font-family:宋体" >（${(clazz.semester.schoolYear)?if_exists}学年${(clazz.semester.name)?if_exists?replace("0","第")}学期）</td>
-        </tr>
     </table>
     <table width='100%' class="reportTitle" align='center'>
       <tr>
@@ -154,10 +151,10 @@
     [#if ((clazz.course.examMode.name)!"")?contains("考试")]
          <td width="7.9%">平时成绩</td>
          <td width="7.9%">考试成绩</td>
-    [#else]
-         <td width="15.8%">考试成绩</td>
-    [/#if]
          <td width="7.9%">总成绩</td>
+    [#else]
+         <td width="23.7%">考查成绩</td>
+    [/#if]
          [#if i ==1]
          <td class="columnSeparator"></td>
          [/#if]
@@ -217,13 +214,12 @@
     [/#list]
     </td>
    [/#if][#--end考查课--]
-   <td></td>
 [#else]
     <td class="columnIndex"></td>
     [#if ((clazz.course.examMode.name)!"")?contains("考试")]
      [#list 1..5 as i]<td></td>[/#list]
     [#else]
-    [#list 1..4 as i]<td></td>[/#list]
+    [#list 1..3 as i]<td></td>[/#list]
     [/#if]
 [/#if]
 
