@@ -216,6 +216,7 @@
    [/#if][#--end考查课--]
 [#else]
     <td class="columnIndex"></td>
+    [#--考试课五个格子，考查课三个格子，两列中间的格子在宏的最下面控制--]
     [#if ((clazz.course.examMode.name)!"")?contains("考试")]
      [#list 1..5 as i]<td></td>[/#list]
     [#else]

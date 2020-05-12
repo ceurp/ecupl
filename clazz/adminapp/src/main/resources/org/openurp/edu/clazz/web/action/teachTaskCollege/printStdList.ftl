@@ -91,13 +91,12 @@ table.reportFoot tr {
     </table>
 <table width='100%' class="reportTitle" align='center'>
       <tr>
-        <td>教学点：${clazz.teachDepart.name}</td>
+        <td>教学点：${page.squad.department.name}</td>
         <td>年级：${page.squad.grade}</td>
         <td>专业：${(page.squad.major.name)!}</td>
         <td>层次：${page.squad.level.name}</td>
       </tr>
     </table>
-
       <table class="reportBody"  width="100%">
         <tr  class="columnTitle" align="center">
           <td width="5%" class="columnIndexTitle">序号</td>

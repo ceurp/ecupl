@@ -89,11 +89,8 @@ table.reportFoot tr {
      <table align="center" style="text-align:center;margin-top: 15px;" cellpadding="0" cellspacing="0">
          <tr>
              <td style="font-weight:bold;font-size:22pt;font-family:宋体" height="30px">
-             华东政法大学夜大学生成绩登分表
+             华东政法大学夜大学生${(task.course.examMode.name)!}成绩登分表
               <td>
-         </tr>
-         <tr>
-           <td style="font-weight:bold;font-size:14pt;font-family:宋体" >（${(task.semester.schoolYear)?if_exists}学年${(task.semester.name)?if_exists?replace("0","第")}学期）</td>
          </tr>
      </table>
      <table width='100%' class="reportTitle" align='center'>
@@ -109,12 +106,12 @@ table.reportFoot tr {
        <td width="5%">序号</td>
        <td width="15%">学号</td>
        <td width="9%">姓名</td>
-       <td width="20%">考试成绩</td>
+       <td width="20%">${(task.course.examMode.name)!}成绩</td>
        <td class="columnSeparator"></td>
        <td width="5%">序号</td>
        <td width="15%">学号</td>
        <td width="9%">姓名</td>
-       <td width="20%" >考试成绩</td>
+       <td width="20%">${(task.course.examMode.name)!}成绩</td>
      </TR>
      [#list 0..pagePrintRow-1 as i]
      <tr class="brightStyle"  >

@@ -74,7 +74,7 @@
     </table>
 <table width='100%' class="reportTitle" align='center'>
       <tr>
-        <td>教学点：${clazz.teachDepart.name}</td>
+        <td>教学点：${page.squad.department.name}</td>
         <td>年级：${page.squad.grade}</td>
         <td>专业：${(page.squad.major.name)!}</td>
         <td>层次：${page.squad.level.name}</td>

@@ -6,13 +6,13 @@
     <version>0.0.1-SNAPSHOT</version>
 	<relativePath>../..</relativePath>
   </parent>
-  <artifactId>ceurp-ecupl-course-adminapp</artifactId>
+  <artifactId>ceurp-ecupl-clazz-adminapp</artifactId>
   <packaging>war</packaging>
-  <name>Ecupl CEURP Course AdminApp</name>
+  <name>Ecupl CEURP Clazz AdminApp</name>
 
   <properties>
-    <bundle.symbolicName>org.openurp.edu.course.adminapp</bundle.symbolicName>
-    <bundle.namespace>org.openurp.edu.course</bundle.namespace>
+    <bundle.symbolicName>org.openurp.edu.clazz.adminapp</bundle.symbolicName>
+    <bundle.namespace>org.openurp.edu</bundle.namespace>
   </properties>
 
   <dependencies>
@@ -21,18 +21,18 @@
       <artifactId>openurp-edu-nav-default</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.course</groupId>
-      <artifactId>openurp-edu-course-schedule</artifactId>
+      <groupId>org.openurp.edu.clazz</groupId>
+      <artifactId>openurp-edu-clazz-schedule</artifactId>
       <version>${openurp.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.course</groupId>
-      <artifactId>openurp-edu-course-election</artifactId>
+      <groupId>org.openurp.edu.clazz</groupId>
+      <artifactId>openurp-edu-clazz-election</artifactId>
       <version>${openurp.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.openurp.edu.course</groupId>
-      <artifactId>openurp-edu-course-teacher</artifactId>
+      <groupId>org.openurp.edu.clazz</groupId>
+      <artifactId>openurp-edu-clazz-teacher</artifactId>
       <version>${openurp.version}</version>
     </dependency>
   </dependencies>

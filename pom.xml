@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.openurp</groupId>
     <artifactId>openurp-java-parent</artifactId>
-    <version>0.3.14</version>
+    <version>0.3.21</version>
   </parent>
   <groupId>net.openurp.ecupl.ceurp</groupId>
   <artifactId>openurp-ceurp-parent</artifactId>
@@ -12,7 +12,7 @@
   <name>Ecupl CEURP Parent</name>
 
   <modules>
-    <module>course/adminapp</module>
+    <module>clazz/adminapp</module>
     <module>grade/adminapp</module>
     <module>grade/studentapp</module>
     <module>finalmakeup/adminapp</module>
@@ -21,7 +21,7 @@
   <properties>
     <downloadSources>true</downloadSources>
     <downloadJavadocs>false</downloadJavadocs>
-    <openurp.version>0.0.2-SNAPSHOT</openurp.version>
+    <openurp.version>0.1.0-SNAPSHOT</openurp.version>
   </properties>
 
   <dependencyManagement>
@@ -47,30 +47,18 @@
         <version>${openurp.version}</version>
       </dependency>
       <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-core</artifactId>
-        <version>${logback.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-classic</artifactId>
-        <version>${logback.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.openurp.edu.course</groupId>
-        <artifactId>openurp-edu-course-schedule</artifactId>
+        <groupId>org.openurp.edu.clazz</groupId>
+        <artifactId>openurp-edu-clazz-schedule</artifactId>
         <version>${openurp.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.openurp.edu.course</groupId>
-        <artifactId>openurp-edu-course-election</artifactId>
+        <groupId>org.openurp.edu.clazz</groupId>
+        <artifactId>openurp-edu-clazz-election</artifactId>
         <version>${openurp.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.openurp.edu.course</groupId>
-        <artifactId>openurp-edu-course-teacher</artifactId>
+        <groupId>org.openurp.edu.clazz</groupId>
+        <artifactId>openurp-edu-clazz-teacher</artifactId>
         <version>${openurp.version}</version>
       </dependency>
       <dependency>
@@ -80,15 +68,4 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <dependencies>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-    </dependency>
-  </dependencies>
 </project>

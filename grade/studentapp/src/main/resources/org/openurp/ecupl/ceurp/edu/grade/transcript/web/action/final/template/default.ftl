@@ -202,20 +202,16 @@
    [#assign scale_min = _pageSize > 20]
 [/#if]
 [#assign printedSemesterCodes=[]/]
-<table align="center" class="${isGQB?string("gqb_GradeHead","zsb_GradeHead")}">
+<table align="center" class="${isGQB?string("gqb_GradeHead","zsb_GradeHead")}" style="margin-bottom:2px">
    <tr>
-     <td width="20%">学习形式：${std.studyType.name}</td>
-     <td width="19.5%">学历层次：${std.level.name}</td>
-     <td width="20%">${b.text('entity.major')}:[@i18nName std.major!/]</td>
-     <td width="14%">学制:${std.duration}</td>
-     <td width="27.5%">年级：${std.grade}</td>
+     <td width="33%">${b.text('attr.stdNo')}:${std.user.code!}</td>
+     <td width="33%">${b.text('attr.personName')}:[@i18nName std!/]</td>
+     <td width="34%">${b.text('attr.gender')}:[@i18nName std.person.gender! /]</td>
    </tr>
    <tr>
-     <td>${b.text('attr.stdNo')}:${std.user.code!}</td>
-     <td>${b.text('attr.personName')}:[@i18nName std!/]</td>
-     <td>${b.text('attr.gender')}:[@i18nName std.person.gender! /]</td>
-     <td>${b.text('grade.creditTotal')}:${(gpas.get(std).credits)!}</td>
-     <td>[#--平均成绩（除英语外）:${(gpas.get(std).ga)!}--]</td>
+     <td>学习形式：${std.studyType.name}</td>
+     <td>学历层次：${std.level.name}</td>
+     <td>${b.text('entity.major')}:[@i18nName std.major!/]</td>
    </tr>
 </table>
 
