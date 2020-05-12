@@ -202,6 +202,7 @@
       [/#if]
     [/#list]
     </td>
+    <td></td>
    [#else][#--start考查课--]
      <td>
      [#list gradeTypes as gradeType]
@@ -215,8 +216,8 @@
     </td>
    [/#if][#--end考查课--]
 [#else]
+    [#--考试课六个格子，考查课四个格子，两列中间的格子在宏的最下面控制--]
     <td class="columnIndex"></td>
-    [#--考试课五个格子，考查课三个格子，两列中间的格子在宏的最下面控制--]
     [#if ((clazz.course.examMode.name)!"")?contains("考试")]
      [#list 1..5 as i]<td></td>[/#list]
     [#else]
