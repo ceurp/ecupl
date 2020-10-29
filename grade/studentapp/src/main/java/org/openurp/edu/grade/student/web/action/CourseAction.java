@@ -29,6 +29,7 @@ import java.util.Set;
 import org.beangle.commons.bean.comparators.MultiPropertyComparator;
 import org.beangle.commons.collection.CollectUtils;
 import org.beangle.commons.dao.query.builder.OqlBuilder;
+import org.beangle.security.Securities;
 import org.openurp.code.edu.model.GradeType;
 import org.openurp.edu.base.model.Semester;
 import org.openurp.edu.base.model.Student;
@@ -98,6 +99,18 @@ public class CourseAction extends StudentProjectSupport {
 
   public void setCourseGradeProvider(CourseGradeProvider courseGradeProvider) {
     this.courseGradeProvider = courseGradeProvider;
+  }
+
+  private Student getLoginStudent() {
+    OqlBuilder<Student> stdQuery = OqlBuilder.from(Student.class, "std");
+    stdQuery.where("std.user.code = :usercode", Securities.getUsername());
+    List<Student> stds = entityDao.search(stdQuery);
+
+    if (stds.isEmpty()) {
+      return null;
+    } else {
+      return stds.get(0);
+    }
   }
 
 }

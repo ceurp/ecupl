@@ -1,5 +1,5 @@
 [#ftl]
-[@b.head/]
+[#include "reportHeader.ftl"/]
 <style>
 .reportBody {
      border-collapse: collapse;

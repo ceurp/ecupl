@@ -1,5 +1,5 @@
 [#ftl]
-﻿[@b.head/]
+[#include "reportHeader.ftl"/]
 [@b.toolbar title='学生名单']
    bar.addItem("[@msg.text name="action.print"/]","print()");
    bar.addItem("[@msg.text name="action.export"/]","export2Excel()");

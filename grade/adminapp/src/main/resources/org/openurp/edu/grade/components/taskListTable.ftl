@@ -105,7 +105,7 @@
          [#if validateToken??]
            bg.form.addInput(form,"validateToken","${validateToken}");
          [/#if]
-         bg.form.submit(form,"${b.url('/course/input!inputTask')}","_blank");
+         bg.form.submit(form,"${b.url('/clazz/input!inputTask')}","_blank");
    }
 
     //删除考试成绩

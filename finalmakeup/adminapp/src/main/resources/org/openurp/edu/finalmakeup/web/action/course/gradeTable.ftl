@@ -1,5 +1,5 @@
 [#ftl]
-[@b.head/]
+[#include "reportHeader.ftl"/]
 [@b.toolbar title="毕业补考成绩登分册"]
    bar.addPrint();
    bar.addClose();

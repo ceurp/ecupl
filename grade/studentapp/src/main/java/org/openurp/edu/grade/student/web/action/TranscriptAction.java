@@ -24,17 +24,20 @@ import java.util.List;
 import java.util.Map;
 
 import org.beangle.commons.collection.CollectUtils;
+import org.beangle.commons.dao.query.builder.OqlBuilder;
 import org.beangle.commons.entity.metadata.Model;
 import org.beangle.commons.lang.Strings;
+import org.beangle.security.Securities;
 import org.openurp.code.edu.model.CourseTakeType;
 import org.openurp.code.edu.model.GradeType;
+import org.openurp.edu.base.model.Project;
 import org.openurp.edu.base.model.Student;
 import org.openurp.edu.grade.app.model.ReportTemplate;
 import org.openurp.edu.grade.app.service.ReportTemplateService;
 
 import org.openurp.edu.grade.transcript.service.TranscriptDataProvider;
 import org.openurp.edu.grade.transcript.service.impl.SpringTranscriptDataProviderRegistry;
-import org.openurp.edu.student.info.model.Graduation;
+import org.openurp.std.info.model.Graduation;
 import org.openurp.edu.web.action.BaseAction;
 
 import com.google.gson.Gson;
@@ -48,6 +51,17 @@ public class TranscriptAction extends BaseAction {
 
   private SpringTranscriptDataProviderRegistry dataProviderRegistry;
 
+  private Student getLoginStudent() {
+    OqlBuilder<Student> stdQuery = OqlBuilder.from(Student.class, "std");
+    stdQuery.where("std.user.code = :usercode", Securities.getUsername());
+    List<Student> stds = entityDao.search(stdQuery);
+
+    if (stds.isEmpty()) {
+      return null;
+    } else {
+      return stds.get(0);
+    }
+  }
   @SuppressWarnings("unchecked")
   public String index() throws Exception {
     Student me = getLoginStudent();

@@ -1,5 +1,5 @@
 [#ftl]
-[@b.head/]
+[#include "reportHeader.ftl"/]
 [#include "/template/macros.ftl"/]
 [#assign perRecordOfPage = 50/]
 [#include "examBlankMacros.ftl"/]
