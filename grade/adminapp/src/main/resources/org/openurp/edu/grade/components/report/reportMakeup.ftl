@@ -37,7 +37,7 @@
     [#assign recordIndex = 0/]
     [#assign courseGrades=squadCourseGrades[squad]/]
     [#--按页循环一组成绩--]
-    [#assign pageSize = ((report.courseGrades?size / perRecordOfPage)?int * perRecordOfPage == report.courseGrades?size)?string(report.courseGrades?size / perRecordOfPage, report.courseGrades?size / perRecordOfPage + 1)?number/]
+    [#assign pageSize = ((courseGrades?size / perRecordOfPage)?int * perRecordOfPage == courseGrades?size)?string(courseGrades?size / perRecordOfPage, courseGrades?size / perRecordOfPage + 1)?number/]
     [#list (pageSize == 0)?string(0, 1)?number..pageSize as pageIndex]
     [@makeupReportHead report squadMap[squad]/]
     <table align="center" class="reportBody" width="100%">

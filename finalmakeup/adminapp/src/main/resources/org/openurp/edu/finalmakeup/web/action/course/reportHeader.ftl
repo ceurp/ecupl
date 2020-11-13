@@ -18,7 +18,7 @@
   ${b.script("bui","js/beangle-ui.js")}
   ${b.css("bui","css/beangle-ui.css")}
   <script type="text/javascript">
-    beangle.register("${b.static_base()}/",{
+    beangle.register("${b.static_base}/",{
         "beangle":{js:"bui/0.3.0/js/beangle.js"},
         "bui":{js:"bui/0.3.0/js/beangle-ui.js",css:["bui/0.3.0/css/beangle-ui.css"]}
     });
