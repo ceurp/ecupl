@@ -28,10 +28,9 @@ import org.beangle.commons.dao.query.builder.OqlBuilder;
 import org.beangle.commons.entity.metadata.Model;
 import org.beangle.commons.lang.Strings;
 import org.beangle.security.Securities;
+import org.openurp.base.edu.model.Student;
 import org.openurp.code.edu.model.CourseTakeType;
 import org.openurp.code.edu.model.GradeType;
-import org.openurp.edu.base.model.Project;
-import org.openurp.edu.base.model.Student;
 import org.openurp.edu.grade.app.model.ReportTemplate;
 import org.openurp.edu.grade.app.service.ReportTemplateService;
 

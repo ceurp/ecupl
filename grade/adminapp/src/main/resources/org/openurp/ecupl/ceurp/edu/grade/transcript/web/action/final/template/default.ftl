@@ -247,7 +247,7 @@
      <td rowspan="${stdGradesMap[semesterCode]?size}">${courseGrade.semester.schoolYear!}学年<br>${courseGrade.semester.name!}学期</td>
     [/#if]
     <td>${stdGradeIndice[courseGrade.id?string]!}</td>
-    <td>[@i18nName courseGrade.course!/]</td>
+    <td>[#if courseGrade.course.name?starts_with("英语")]英语[#else]${courseGrade.course.name}[/#if]</td>
     <td>[#if stdGradeIndice[courseGrade.id?string]??]${courseGrade.course.credits!}[#else]/[/#if]</td>
     <td>[@displayFinal  courseGrade/]</td>
     <td>[@displayMakeup courseGrade/]</td>
@@ -265,7 +265,7 @@
      <td rowspan="${stdGradesMap[semesterCode]?size}">${courseGrade.semester.schoolYear!}学年<br>${courseGrade.semester.name!}学期</td>
     [/#if]
     <td>${stdGradeIndice[courseGrade.id?string]!}</td>
-    <td>[@i18nName courseGrade.course! /]</td>
+    <td>[#if courseGrade.course.name?starts_with("英语")]英语[#else]${courseGrade.course.name}[/#if]</td>
     <td>[#if stdGradeIndice[courseGrade.id?string]??]${courseGrade.course.credits!}[#else]/[/#if]</td>
     <td>[@displayFinal  courseGrade/]</td>
     <td>[@displayMakeup courseGrade/]</td>
