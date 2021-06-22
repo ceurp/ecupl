@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.openurp</groupId>
     <artifactId>openurp-parent</artifactId>
-    <version>0.4.8</version>
+    <version>0.4.12</version>
   </parent>
   <groupId>net.openurp.ecupl.ceurp</groupId>
   <artifactId>ceurp-ecupl-finalmakeup-adminapp</artifactId>
@@ -13,10 +13,10 @@
   <name>Ecupl CEURP Finalmakeup Adminapp</name>
 
   <properties>
-    <openurp.api.version>0.20.4</openurp.api.version>
-    <openurp.boot.version>0.0.2</openurp.boot.version>
-    <openurp.edu.grade.version>0.0.11</openurp.edu.grade.version>
-    <openurp.edu.finalmakeup.version>0.0.14</openurp.edu.finalmakeup.version>
+    <openurp.api.version>0.22.1</openurp.api.version>
+    <openurp.starter.version>0.0.5</openurp.starter.version>
+    <openurp.edu.grade.version>0.0.13</openurp.edu.grade.version>
+    <openurp.edu.finalmakeup.version>0.0.16</openurp.edu.finalmakeup.version>
   </properties>
 
   <dependencies>

@@ -1,9 +1,9 @@
 [#ftl]
 [#include "reportHeader.ftl"/]
 [#include "/template/macros.ftl"/]
-[#assign perRecordOfPage = 50/]
+[#assign perRecordOfPage = 30/]
 [#include "examBlankMacros.ftl"/]
-[#include "reportStyle.ftl"/]
+[#include "examReportStyle.ftl"/]
 [@reportStyle/]
 [@b.toolbar title="教学班补缓签到表打印"]
    bar.addPrint();

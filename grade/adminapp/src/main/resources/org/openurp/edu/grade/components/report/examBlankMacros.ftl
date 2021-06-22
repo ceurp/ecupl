@@ -95,7 +95,7 @@
       [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
         [#local et = examTakers.get(courseTaker.std)/]
         [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
-        ${et.examStatus.name}[#assign gaScore][#if et.examStatus.deferred]●[#elseif et.examStatus.id=3]/[/#if][/#assign]
+        ${et.examStatus.name}[#assign gaScore][#if et.examStatus.hasDeferred]●[#elseif et.examStatus.id=3]/[/#if][/#assign]
         [/#if]
       [#else]
         ${gaScore!}
@@ -116,7 +116,7 @@
       [#if gradeType.examType?? && examTakers.get(courseTaker.std)??]
         [#local et = examTakers.get(courseTaker.std)/]
         [#if et.examType==gradeType.examType && et.examStatus.id !=1 ]
-        ${et.examStatus.name}[#if et.examStatus.deferred]●[/#if]
+        ${et.examStatus.name}[#if et.examStatus.hasDeferred]●[/#if]
         [/#if]
       [/#if]
      </td>

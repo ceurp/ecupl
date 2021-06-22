@@ -120,12 +120,19 @@
       <td>免试</td>
     [#else]
 
+    [#--找到考查课程的总评--]
     [#list report.gradeTypes as gradeType]
-      [#if gradeType.id==2]
+       [#if gradeType.id == 7 ]
+          [#assign gaGrade = courseGrade.getGrade(gradeType)!"null"/]
+       [/#if]
+    [/#list]
+
+    [#list report.gradeTypes as gradeType]
+      [#if gradeType.id != 7 ]
      <td>
         [#local examGrade=courseGrade.getGrade(gradeType)!"null"/]
-        [#if examGrade!="null"]
-          [#if !examGrade.gradingMode.numerical && (examGrade.scoreText!)?length>2]<span class="longScoreText">${examGrade.scoreText!}</span>[#else]${examGrade.scoreText!}[/#if][#if examGrade.examStatus?? && examGrade.examStatus.id!=1]<span class="examStatus"> ${examGrade.examStatus.name}</span>[/#if]
+        [#if examGrade!="null" && gaGrade!="null"]
+          [#if !gaGrade.gradingMode.numerical && (gaGrade.scoreText!)?length>2]<span class="longScoreText">${gaGrade.scoreText!}</span>[#else]${gaGrade.scoreText!}[/#if][#if examGrade.examStatus?? && examGrade.examStatus.id!=1]<span class="examStatus"> ${examGrade.examStatus.name}</span>[/#if]
         [/#if]
      </td>
      [/#if]

@@ -1,9 +1,9 @@
 [#ftl]
 [#include "reportHeader.ftl"/]
 [#include "/template/macros.ftl"/]
-[#assign perRecordOfPage = 50/]
+[#assign perRecordOfPage = 30/]
 [#include "examBlankMacros.ftl"/]
-[#include "reportStyle.ftl"/]
+[#include "examReportStyle.ftl"/]
 [@reportStyle/]
 [@b.toolbar title="教学班期末考试签到表打印"]
   bar.addPrint();
@@ -54,6 +54,11 @@
            </tr>
            [/#list]
            [#assign recordIndex = perRecordOfPage * pageIndex/]
+        </table>
+        <table width='100%' class="reportTitle" align='center'>
+          <tr>
+            <td>班级：${squad}</td>
+          </tr>
         </table>
         [@gaReportFoot clazz/]
             [#if (pageIndex + 1 < pageSize)]
