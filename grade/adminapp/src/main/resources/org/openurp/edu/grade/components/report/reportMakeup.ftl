@@ -37,8 +37,8 @@
     [#assign recordIndex = 0/]
     [#assign courseGrades=squadCourseGrades[squad]/]
     [#--按页循环一组成绩--]
-    [#assign pageSize = ((courseGrades?size / perRecordOfPage)?int * perRecordOfPage == courseGrades?size)?string(courseGrades?size / perRecordOfPage, courseGrades?size / perRecordOfPage + 1)?number/]
-    [#list (pageSize == 0)?string(0, 1)?number..pageSize as pageIndex]
+    [#assign pageSize = (courseGrades?size / perRecordOfPage)?ceiling/]
+    [#list 1..pageSize as pageIndex]
     [@makeupReportHead report squadMap[squad]/]
     <table align="center" class="reportBody" width="100%">
        [@makeupReportColumnTitle report/]
@@ -52,7 +52,7 @@
        [#assign recordIndex = perRecordOfPage * pageIndex/]
     </table>
     [@makeupReportFoot report/]
-        [#if (pageIndex + 1 < pageSize)]
+        [#if (pageIndex < pageSize)]
     <div style="PAGE-BREAK-AFTER: always"></div>
         [/#if]
         [/#list]

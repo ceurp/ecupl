@@ -40,8 +40,8 @@
     [#list squads as squad]
         [#assign recordIndex = 0/]
         [#assign courseTakers=squadCourseTakers[squad]/]
-        [#assign pageSize = ((courseTakers?size / perRecordOfPage)?int * perRecordOfPage == courseTakers?size)?string(courseTakers?size / perRecordOfPage, courseTakers?size / perRecordOfPage + 1)?number/]
-        [#list (pageSize == 0)?string(0, 1)?number..pageSize as pageIndex]
+        [#assign pageSize = (courseTakers?size / perRecordOfPage)?ceiling/]
+        [#list 1..pageSize as pageIndex]
 
         [@gaReportHead clazz squadMap[squad]/]
         <table align="center" class="reportBody" width="100%">
@@ -61,7 +61,7 @@
           </tr>
         </table>
         [@gaReportFoot clazz/]
-            [#if (pageIndex + 1 < pageSize)]
+            [#if (pageIndex < pageSize)]
         <div style="PAGE-BREAK-AFTER: always;"></div>
             [/#if]
         [/#list]
